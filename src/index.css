@@ -1,0 +1,13 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #e74c3c;
+    --text-color: #333;
+    --dark-blue:  #1F5673;
+  }
+  
+
+.innerWidth {
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 1.5rem; /* Apply padding for spacing */
+    max-width: 1200px; /* Set a maximum width for larger screens */
+  }
