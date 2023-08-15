@@ -1,4 +1,5 @@
 :root {
+  padding: 0%;
     --primary-color: #3498db;
     --secondary-color: #e74c3c;
     --text-color: #333;
@@ -8,6 +9,15 @@
 
 .innerWidth {
     margin: 0 auto; /* Center the container horizontally */
-    padding: 1.5rem; /* Apply padding for spacing */
-    max-width: 1200px; /* Set a maximum width for larger screens */
+    padding: 1.5rem;/* Apply padding for spacing */
+    max-width: 1400px; /* Set a maximum width for larger screens */
   }
+
+.navbar {
+  /* position: fixed; */
+  z-index: 1000;
+}
+
+.border-none {
+  border: none;
+}
