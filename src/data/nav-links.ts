@@ -3,7 +3,7 @@ interface NavLinks {
 }
 
 const navLinks: NavLinks[] = [
-    { title: 'Services' },
+    { title: 'Services'},
     { title: 'Partners' },
     { title: 'About us' },
 ];
