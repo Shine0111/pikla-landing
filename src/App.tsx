@@ -8,6 +8,7 @@ import CaptainsSection from "./components/CaptainsSection";
 import EngineeringPiklaSection from "./components/EngineeringPiklaSection";
 import SocialImpactSection from "./components/SocialImpactSection";
 import OurBlogSection from "./components/OurBlogSection";
+import FooterSection from "./components/FooterSection";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <EngineeringPiklaSection />
       <SocialImpactSection />
       <OurBlogSection />
+      <FooterSection />
     </div>
   );
 };
