@@ -18,7 +18,7 @@ interface Props {
 
 const ServiceCard = ({ categories, heading, onClick }: Props) => {
   return (
-    <Card borderRadius={20} height="20em">
+    <Card borderRadius={20} height="15em">
       <CardHeader>
         <Heading size="md">{heading}</Heading>
       </CardHeader>
