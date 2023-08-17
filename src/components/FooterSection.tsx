@@ -1,4 +1,4 @@
-import { Divider, HStack, VStack, Text, Icon, Stack } from "@chakra-ui/react";
+import { Divider, HStack, Text, Icon, Stack } from "@chakra-ui/react";
 import { MdFacebook } from "react-icons/md";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
