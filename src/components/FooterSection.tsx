@@ -17,9 +17,9 @@ const FooterSection = () => {
       <Divider />
       <Stack
         direction={{
-          base: "column",
-          sm: "column",
-          md: "column",
+          base: "column-reverse",
+          sm: "column-reverse",
+          md: "column-reverse",
           lg: "row",
         }}
         justifyContent="space-between"
@@ -31,7 +31,7 @@ const FooterSection = () => {
           <Text fontSize="xs">Terms of Service Privacy Policy</Text>
         </div>
 
-        <HStack justifyContent="center">
+        <HStack>
           <Icon as={MdFacebook} />
           <Icon as={AiFillTwitterCircle} />
           <Icon as={TiSocialLinkedinCircular} />
