@@ -6,18 +6,23 @@ import { TiSocialInstagramCircular } from "react-icons/ti";
 
 const FooterSection = () => {
   return (
-    <VStack className="innerWidth">
-      <div>first part</div>
+    <Stack
+      direction={{
+        base: "column",
+      }}
+      className="innerWidth"
+      justifyContent="space-between"
+    >
+      <div>first part of footer</div>
       <Divider />
       <Stack
-        className="innerWidth"
-        justifyContent="space-evenly"
         direction={{
           base: "column",
           sm: "column",
           md: "column",
           lg: "row",
         }}
+        justifyContent="space-between"
       >
         <div>
           <Text fontSize="xs">All rights reserved. Pikla © 2023</Text>
@@ -33,7 +38,7 @@ const FooterSection = () => {
           <Icon as={TiSocialInstagramCircular} />
         </HStack>
       </Stack>
-    </VStack>
+    </Stack>
   );
 };
 

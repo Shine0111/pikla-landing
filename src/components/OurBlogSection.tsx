@@ -1,6 +1,5 @@
-import { HStack, Heading } from "@chakra-ui/react";
-import fakeBlogs from "../data/fake-blogs";
-import BlogCard from "./BlogCard";
+import { Heading } from "@chakra-ui/react";
+import BlogsSlide from "./BlogsSlide";
 
 const OurBlogSection = () => {
   return (
@@ -8,11 +7,12 @@ const OurBlogSection = () => {
       <div className="innerWidth">
         <Heading color="black">Our Blog</Heading>
       </div>
-      <HStack className="innerWidth " paddingBottom={10}>
+      {/* <HStack className="innerWidth " paddingBottom={10}>
         {fakeBlogs.map((fakeBlog) => (
           <BlogCard key={fakeBlog.title} />
         ))}
-      </HStack>
+      </HStack> */}
+      <BlogsSlide />
     </div>
   );
 };
