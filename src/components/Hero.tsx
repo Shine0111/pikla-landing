@@ -1,10 +1,18 @@
-import { Box, Image } from "@chakra-ui/react";
+import { Box, Image, Show } from "@chakra-ui/react";
 import heroGif from "../assets/App-gif.png";
+import UseApp from "./UseApp";
 
 const Hero = () => {
   return (
     <Box className="innerWidth">
-      <Image src={heroGif} borderRadius={20} marginTop={90} />
+      <Box marginTop={70}>
+        <Show below="sm">
+          <UseApp />
+        </Show>
+        <Box>
+          <Image src={heroGif} borderRadius={20} />
+        </Box>
+      </Box>
     </Box>
   );
 };

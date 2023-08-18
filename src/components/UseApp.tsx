@@ -16,7 +16,9 @@ const UseApp = () => {
       className="innerWidth"
       backgroundColor="var(--dark-blue)"
       justifyContent="space-between"
-      marginTop={0}
+      zIndex={999}
+      borderRadius={20}
+      marginBottom={3}
     >
       <PiklaApp />
       <HStack>

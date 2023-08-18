@@ -17,6 +17,9 @@
     padding: 1.5rem;/* Apply padding for spacing */
     max-width: 1150px; /* Set a maximum width for larger screens */
   }
+  .width100 {
+    width: 100%;
+  }
 
 .parent-container {
   position: relative;
@@ -88,4 +91,9 @@
   right: 0;
   transform: skew(20deg); /* Adjust the angle as needed */
   transform-origin: right bottom;
+}
+
+
+.mTop {
+  margin-top: 5rem;
 }
