@@ -18,9 +18,19 @@
     max-width: 1150px; /* Set a maximum width for larger screens */
   }
 
+.parent-container {
+  position: relative;
+}
+
 .navbar {
-  /* position: fixed; */
-  z-index: 1000;
+
+  background-color: white;
+
+
+}
+.content-parent {
+
+  margin-top: 1rem;
 }
 
 .border-none {
@@ -46,6 +56,16 @@
   /* Clip the content inside the background shape */
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
+.nav-background {
+  background: white;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+.nav-shadow {
+  box-shadow: 0px 0.5px 3px gray;
+}
+
 
 /* Pseudo-elements to create the angled bottom */
 .custom-background::before,

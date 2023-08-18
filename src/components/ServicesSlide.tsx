@@ -38,6 +38,7 @@ const ServicesSlide = () => {
             heading={service.title}
             onClick={() => console.log("Clicked", service.title)}
             categories={service.categories}
+            background={service.background}
           />
         </SwiperSlide>
       ))}

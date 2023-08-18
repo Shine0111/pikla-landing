@@ -14,11 +14,12 @@ interface Props {
   heading: string;
   categories: string[];
   onClick: () => void;
+  background: string;
 }
 
-const ServiceCard = ({ categories, heading, onClick }: Props) => {
+const ServiceCard = ({ categories, heading, onClick, background }: Props) => {
   return (
-    <Card borderRadius={20} height="15em">
+    <Card borderRadius={20} height="15em" background={background} color="white">
       <CardHeader>
         <Heading size="md">{heading}</Heading>
       </CardHeader>

@@ -13,12 +13,24 @@ import navLinks from "../data/nav-links";
 import logo from "../assets/logo-long.png";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import MenuMobile from "./MenuMobile";
+import { useState } from "react";
 
 const Header = () => {
+  const [isScrolling, setIsScrolling] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  window.addEventListener("scroll", () => {
+    setIsScrolling(window.scrollY > 0);
+  });
+
+  const containerClassName = () => {
+    if (isScrolling) return "nav-background nav-shadow";
+    return "nav-background ";
+  };
+
   return (
-    <>
-      <HStack className="innerWidth navbar" justifyContent="space-between">
+    <div className={containerClassName()}>
+      <HStack className="innerWidth" justifyContent="space-between">
         <HStack>
           <Image src={logo} marginRight={16} />
           <Show above="lg">
@@ -46,9 +58,9 @@ const Header = () => {
             />
           </Show>
         </HStack>
+        <MenuMobile onClose={onClose} isOpen={isOpen} />
       </HStack>
-      <MenuMobile onClose={onClose} isOpen={isOpen} />
-    </>
+    </div>
   );
 };
 
