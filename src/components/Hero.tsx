@@ -10,7 +10,7 @@ const Hero = () => {
           <UseApp />
         </Show>
         <Box>
-          <Image src={heroGif} borderRadius={20} />
+          <Image src={heroGif} borderRadius={20} objectFit="cover" />
         </Box>
       </Box>
     </Box>

@@ -6,6 +6,7 @@ interface Props {
   backgrounded?: boolean;
   heading: string;
   description: string;
+  onClick: () => void;
 }
 
 const Section = ({
@@ -13,6 +14,7 @@ const Section = ({
   backgrounded,
   heading,
   description,
+  onClick,
 }: Props) => {
   if (imageOnLeft)
     return (
@@ -37,7 +39,8 @@ const Section = ({
           <VStack alignItems="flex-start" spacing={5}>
             <Heading>{heading}</Heading>
             <Text>{description}</Text>
-            <Button>Read more</Button>
+
+            <Button onClick={onClick}>Read more</Button>
           </VStack>
         </Stack>
       </div>
@@ -57,7 +60,8 @@ const Section = ({
       <VStack alignItems="flex-start" spacing={5}>
         <Heading>{heading}</Heading>
         <Text>{description}</Text>
-        <Button>Read more</Button>
+
+        <Button onClick={onClick}>Read more</Button>
       </VStack>
       <Image
         src={team}
