@@ -1,4 +1,4 @@
-import { Divider, HStack, Text, Icon, Stack } from "@chakra-ui/react";
+import { Divider, HStack, Text, Stack, IconButton } from "@chakra-ui/react";
 import { MdFacebook } from "react-icons/md";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
@@ -32,10 +32,26 @@ const FooterSection = () => {
         </div>
 
         <HStack>
-          <Icon as={MdFacebook} />
-          <Icon as={AiFillTwitterCircle} />
-          <Icon as={TiSocialLinkedinCircular} />
-          <Icon as={TiSocialInstagramCircular} />
+          <IconButton
+            aria-label="facebook"
+            icon={<MdFacebook />}
+            background="none"
+          />
+          <IconButton
+            aria-label="twitter"
+            icon={<AiFillTwitterCircle />}
+            background="none"
+          />
+          <IconButton
+            aria-label="linkedin"
+            icon={<TiSocialLinkedinCircular />}
+            background="none"
+          />
+          <IconButton
+            aria-label="instagram"
+            icon={<TiSocialInstagramCircular />}
+            background="none"
+          />
         </HStack>
       </Stack>
     </Stack>
