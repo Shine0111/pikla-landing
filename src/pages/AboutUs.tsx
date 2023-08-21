@@ -1,9 +1,10 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import Hero from "../components/Hero";
 
 const AboutUs = () => {
   return (
-    <Box paddingTop={90} className="innerWidth">
-      <Text>About us</Text>
+    <Box className="innerWidth">
+      <Hero />
     </Box>
   );
 };
