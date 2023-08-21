@@ -34,7 +34,12 @@ const BlogsSlide = () => {
     >
       {fakeBlogs.map((fakeBlog) => (
         <SwiperSlide key={fakeBlog.title}>
-          <BlogCard key={fakeBlog.title} />
+          <BlogCard
+            imageSrc={fakeBlog.src}
+            heading={fakeBlog.title}
+            description={fakeBlog.description}
+            onClick={() => console.log("clicked", fakeBlog.title)}
+          />
         </SwiperSlide>
       ))}
       ...
