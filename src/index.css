@@ -10,7 +10,7 @@
 .innerWidth {
     margin: 0 auto; /* Center the container horizontally */
     padding: 1.5rem;/* Apply padding for spacing */
-    max-width: 1250px; /* Set a maximum width for larger screens */
+    max-width: 1350px; /* Set a maximum width for larger screens */
   }
 .sectionInnerWidth {
     margin: 0 auto; /* Center the container horizontally */
