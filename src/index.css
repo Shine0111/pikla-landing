@@ -40,6 +40,10 @@
   border: none;
 }
 
+.titlePadding {
+  padding: 2rem 0rem 2rem 0rem;
+}
+
 .custom-background {
   position: relative;
   padding: 20px; /* Adjust as needed */
