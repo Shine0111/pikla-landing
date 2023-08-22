@@ -6,6 +6,7 @@ interface Props {
   backgrounded?: boolean;
   heading: string;
   description: string;
+  buttonText?: string;
   onClick: () => void;
 }
 
@@ -14,6 +15,7 @@ const Section = ({
   backgrounded,
   heading,
   description,
+  buttonText,
   onClick,
 }: Props) => {
   if (imageOnLeft)
@@ -36,11 +38,13 @@ const Section = ({
             width={500}
             objectFit="cover"
           />
-          <VStack alignItems="flex-start" spacing={5}>
+          <VStack alignItems="flex-start" spacing={5} justifyContent="center">
             <Heading>{heading}</Heading>
             <Text>{description}</Text>
 
-            <Button onClick={onClick}>Read more</Button>
+            <Button onClick={onClick}>
+              {buttonText ? buttonText : "Read more"}
+            </Button>
           </VStack>
         </Stack>
       </div>
@@ -57,7 +61,7 @@ const Section = ({
         lg: "row",
       }}
     >
-      <VStack alignItems="flex-start" spacing={5}>
+      <VStack alignItems="flex-start" spacing={5} justifyContent="center">
         <Heading>{heading}</Heading>
         <Text>{description}</Text>
 

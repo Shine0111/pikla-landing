@@ -14,10 +14,13 @@ import logo from "../assets/logo-long.png";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import MenuMobile from "./MenuMobile";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isScrolling, setIsScrolling] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const navigate = useNavigate();
 
   window.addEventListener("scroll", () => {
     setIsScrolling(window.scrollY > 0);
@@ -32,7 +35,12 @@ const Header = () => {
     <div className={containerClassName()}>
       <HStack className="innerWidth" justifyContent="space-between">
         <HStack>
-          <Image src={logo} marginRight={16} />
+          <Image
+            src={logo}
+            marginRight={16}
+            onClick={() => navigate("/")}
+            className="logo"
+          />
           <Show above="lg">
             <HStack>
               {navLinks.map((link) => (

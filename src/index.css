@@ -2,8 +2,13 @@
   padding: 0%;
     --primary-color: #3498db;
     --secondary-color: #e74c3c;
+    --gray-background: #f6f6f6;
     --text-color: #333;
     --dark-blue:  #1F5673;
+  }
+  .vl {
+    border-left: 3px solid var(--dark-blue);
+
   }
   
 
@@ -17,6 +22,9 @@
     padding: 1.5rem;/* Apply padding for spacing */
     max-width: 1150px; /* Set a maximum width for larger screens */
   }
+.logo:hover {
+  cursor: pointer;
+}
   .width100 {
     width: 100%;
   }

@@ -18,6 +18,7 @@ const Leaders = () => {
           heading={leader.name}
           imageSrc={leader.picture}
           position={leader.position}
+          socialLink
           onClick={() => console.log("clicked", leader.name)}
         />
       ))}
