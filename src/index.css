@@ -58,15 +58,9 @@
   color: white; /* Text color to contrast with the background */
 
   /* Create the stairs background using linear gradients */
-  background: linear-gradient(135deg, transparent 10px, #3498db 0) 0 0,
-              linear-gradient(45deg, transparent 10px, #3498db 0) 0 0,
-              linear-gradient(45deg, transparent 10px, #3498db 0) 0 100%,
-              linear-gradient(135deg, transparent 10px, #3498db 0) 0 100%,
-              #3498db; /* The main background color */
-
-  background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%, 100% 100%;
-  background-position: left top, right top, left bottom, right bottom, center center;
-  background-repeat: no-repeat;
+  background: linear-gradient(0.25turn, rgba(6,190,225,1), rgba(36,110,185,0.81) 70%, rgba(34,95,146,0.84) 100%);  /* background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%, 100% 100%; */
+  /* background-position: left top, right top, left bottom, right bottom, center center; */
+  /* background-repeat: no-repeat; */
 
   /* Clip the content inside the background shape */
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
@@ -83,27 +77,27 @@
 
 
 /* Pseudo-elements to create the angled bottom */
-.custom-background::before,
+/* .custom-background::before,
 .custom-background::after {
   content: "";
   position: absolute;
   width: 100vw; /* Full viewport width */
-  height: 10px; /* Adjust as needed */
-  background-color: #3498db; /* Match the main background color */
+  /* height: 10px; Adjust as needed */
+  /* background-color: #3498db; */
 
   /* Position the pseudo-elements to create the angled bottom */
-  bottom: -5px;
+  /* bottom: -5px;
   left: 0;
   transform: skew(-20deg); /* Adjust the angle as needed */
-  transform-origin: left bottom;
-}
+  /* transform-origin: left bottom; */
+/* } */ 
 
-.custom-background::after {
+/* .custom-background::after {
   left: auto;
   right: 0;
-  transform: skew(20deg); /* Adjust the angle as needed */
+  transform: skew(20deg);
   transform-origin: right bottom;
-}
+} */
 
 
 .mTop {
