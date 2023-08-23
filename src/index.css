@@ -17,10 +17,18 @@
     padding: 1.5rem;/* Apply padding for spacing */
     max-width: 1350px; /* Set a maximum width for larger screens */
   }
-.sectionInnerWidth {
+  .sectionInnerWidth {
     margin: 0 auto; /* Center the container horizontally */
     padding: 1.5rem;/* Apply padding for spacing */
     max-width: 1150px; /* Set a maximum width for larger screens */
+  }
+  .top-questions-innerWidth {
+    margin: 0 auto; /* Center the container horizontally */
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    padding: 1.5rem;/* Apply padding for spacing */
+    max-width: 1300px; /* Set a maximum width for larger screens */
+
   }
 .logo:hover {
   cursor: pointer;
@@ -74,6 +82,28 @@
 .nav-shadow {
   box-shadow: 0px 0.5px 3px gray;
 }
+.margin-bottom {
+  margin-bottom: 10rem;
+}
+
+/*Hero*/
+.hero-image-container {
+  position: relative;
+  height: auto;
+}
+.hero-image-button {
+  position: absolute;
+
+  transform: translate(100%, -200%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
 
 
 /* Pseudo-elements to create the angled bottom */
@@ -103,3 +133,21 @@
 .mTop {
   margin-top: 5rem;
 }
+
+/* Custom accordion */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.accordion-heading {
+  display: flex;
+  flex-direction: 'row';
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.accordion-heading:hover {
+  cursor: pointer;
+}
+

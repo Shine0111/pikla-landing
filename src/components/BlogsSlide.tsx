@@ -30,7 +30,7 @@ const BlogsSlide = () => {
           spaceBetween: 20,
         },
       }}
-      className="innerWidth"
+      className="innerWidth margin-bottom"
     >
       {fakeBlogs.map((fakeBlog) => (
         <SwiperSlide key={fakeBlog.title}>

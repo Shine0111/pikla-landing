@@ -24,6 +24,12 @@ const captains: Captain[] = [
     comment:
       "“Careem enables me to maximize my earnings and improve my lifestyle.”",
   },
+  {
+    name: "Ljerka Laurentia",
+    picture: pic,
+    comment:
+      "“Careem enables me to maximize my earnings and improve my lifestyle.”",
+  },
 ];
 
 export default captains;

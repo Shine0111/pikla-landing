@@ -1,15 +1,16 @@
-import { Heading, SimpleGrid, VStack } from "@chakra-ui/react";
+import { Heading, SimpleGrid, VStack, Text } from "@chakra-ui/react";
 import Hero from "../components/Hero";
 import benefits from "../data/benefits";
 import BenefitCard from "../components/BenefitCard";
 import StatSection from "../components/StatSection";
 import Section from "../components/Section";
-import CaptainsSlide from "../components/CaptainsSlide";
+import TopQuestions from "../components/TopQuestions";
+// import CaptainsSlide from "../components/CaptainsSlide";
 
 const Captains = () => {
   return (
     <div>
-      <Hero />
+      <Hero buttoned buttonText="Sign Up" />
       <div className="innerWidth">
         <Heading textAlign="center">Captains benefits</Heading>
       </div>
@@ -47,8 +48,10 @@ const Captains = () => {
         <div className="innerWidth">
           <Heading textAlign="center">Meet the Captains</Heading>
         </div>
-        <CaptainsSlide />
+        {/* <CaptainsSlide /> */}
+        <Text>this section is still on dev ...</Text>
       </VStack>
+      <TopQuestions />
     </div>
   );
 };
