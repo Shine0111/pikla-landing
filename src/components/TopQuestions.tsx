@@ -16,7 +16,7 @@ const TopQuestions = () => {
         <CustomAccordion
           key={fakeTopQuestion.question}
           heading={fakeTopQuestion.question}
-          description={fakeTopQuestion.question}
+          description={fakeTopQuestion.answer}
         />
       ))}
     </Box>

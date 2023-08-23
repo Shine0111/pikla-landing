@@ -14,7 +14,7 @@ const Hero = ({ buttoned, buttonText }: Props) => {
         <Show below="md">
           <UseApp />
         </Show>
-        <Box className="hero-image-container innerWidth">
+        <Box className="hero-image-container">
           <Image src={heroGif} borderRadius={20} objectFit="cover" />
           {buttoned && (
             <Button className="hero-image-button">{buttonText}</Button>
