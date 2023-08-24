@@ -7,6 +7,10 @@
     --text-color: #333;
     --dark-blue:  #1F5673;
   }
+button:hover {
+  cursor: pointer;
+}
+
   /* custom scrollbar */
   /* width */
 ::-webkit-scrollbar {
@@ -174,4 +178,6 @@
 .accordion-heading:hover {
   cursor: pointer;
 }
-
+.footer-heading {
+  padding-bottom: 1.5rem;
+}
