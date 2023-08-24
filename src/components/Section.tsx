@@ -30,6 +30,7 @@ const Section = ({
             md: "column",
             lg: "row",
           }}
+          color={"black"}
         >
           <Image
             src={team}
@@ -51,30 +52,35 @@ const Section = ({
     );
 
   return (
-    <Stack
-      className="sectionInnerWidth"
-      spacing={24}
-      direction={{
-        base: "column-reverse",
-        sm: "column-reverse",
-        md: "column-reverse",
-        lg: "row",
-      }}
-    >
-      <VStack alignItems="flex-start" spacing={5} justifyContent="center">
-        <Heading>{heading}</Heading>
-        <Text>{description}</Text>
+    <div className={backgrounded ? "custom-background" : ""}>
+      <Stack
+        className="sectionInnerWidth"
+        spacing={24}
+        direction={{
+          base: "column-reverse",
+          sm: "column-reverse",
+          md: "column-reverse",
+          lg: "row",
+        }}
+        color={"black"}
+      >
+        <VStack alignItems="flex-start" spacing={5} justifyContent="center">
+          <Heading>{heading}</Heading>
+          <Text>{description}</Text>
 
-        <Button onClick={onClick}>Read more</Button>
-      </VStack>
-      <Image
-        src={team}
-        borderRadius={40}
-        boxSize={400}
-        width={500}
-        objectFit="cover"
-      />
-    </Stack>
+          <Button onClick={onClick}>
+            {buttonText ? buttonText : "Read more"}
+          </Button>
+        </VStack>
+        <Image
+          src={team}
+          borderRadius={40}
+          boxSize={400}
+          width={500}
+          objectFit="cover"
+        />
+      </Stack>
+    </div>
   );
 };
 

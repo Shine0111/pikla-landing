@@ -29,7 +29,14 @@ const Captains = () => {
         ))}
       </SimpleGrid>
       <div className="custom-background">
-        <StatSection />
+        <StatSection
+          number0="0"
+          text0="Rides"
+          number1="0"
+          text1="Captains"
+          number2="1"
+          text2="City"
+        />
       </div>
       <Section
         heading="Driving with Pikla"
