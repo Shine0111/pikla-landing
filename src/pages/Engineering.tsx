@@ -1,6 +1,9 @@
 import { Stack, Heading, Box } from "@chakra-ui/react";
 
 import Hero from "../components/Hero";
+import OurBlogSection from "../components/OurBlogSection";
+import quotes from "../data/fake-quotes";
+import Quote from "../components/Quote";
 
 const Engineering = () => {
   return (
@@ -31,6 +34,18 @@ const Engineering = () => {
           </p>
         </Box>
       </Stack>
+      <div className="innerWidth">
+        {quotes.map((quote) => (
+          <Quote
+            key={quote.person}
+            imageSrc={quote.imageSrc}
+            quote={quote.quote}
+            person={quote.person}
+            position={quote.position}
+          />
+        ))}
+      </div>
+      <OurBlogSection />
     </div>
   );
 };

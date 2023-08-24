@@ -43,7 +43,6 @@ const ServicesSlide = () => {
             />
           </SwiperSlide>
         ))}
-        ...
       </Swiper>
     </Box>
   );

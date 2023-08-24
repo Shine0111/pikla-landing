@@ -51,7 +51,9 @@ const Captains = () => {
         {/* <CaptainsSlide /> */}
         <Text>this section is still on dev ...</Text>
       </VStack>
-      <TopQuestions />
+      <div className="innerWidth">
+        <TopQuestions />
+      </div>
     </div>
   );
 };
