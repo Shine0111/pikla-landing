@@ -40,6 +40,8 @@ const ServicesSlide = () => {
               onClick={() => console.log("Clicked", service.title)}
               categories={service.categories}
               background={service.background}
+              color={service.color}
+              arrowColor={service.arrowColor}
             />
           </SwiperSlide>
         ))}

@@ -61,10 +61,10 @@ const FooterSection = () => {
             md: "column",
             lg: "row",
           }}
-          gap="2rem"
+          gap="10rem"
         >
           <VStack alignItems="flex-start">
-            <Heading className="footer-heading" fontSize="lg">
+            <Heading className="footer-heading" fontSize="2xl">
               Services
             </Heading>
             <List>
@@ -77,7 +77,7 @@ const FooterSection = () => {
           </VStack>
 
           <VStack alignItems="flex-start">
-            <Heading className="footer-heading" fontSize="lg">
+            <Heading className="footer-heading" fontSize="2xl">
               Join our team
             </Heading>
             <List>
@@ -100,7 +100,7 @@ const FooterSection = () => {
           </VStack>
 
           <VStack alignItems="flex-start">
-            <Heading className="footer-heading" fontSize="lg">
+            <Heading className="footer-heading" fontSize="2xl">
               About us
             </Heading>
             <List>
