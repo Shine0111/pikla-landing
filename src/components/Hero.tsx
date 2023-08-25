@@ -1,5 +1,5 @@
 import { Box, Button, Image, Show } from "@chakra-ui/react";
-import heroGif from "../assets/App-gif.png";
+import heroGif from "../assets/logo-long.png";
 import UseApp from "./UseApp";
 
 interface Props {
@@ -15,7 +15,12 @@ const Hero = ({ buttoned, buttonText }: Props) => {
           <UseApp />
         </Show>
         <Box className="hero-image-container">
-          <Image src={heroGif} borderRadius={20} objectFit="cover" />
+          <Image
+            src={heroGif}
+            borderRadius={20}
+            objectFit="cover"
+            width="500px"
+          />
           {buttoned && (
             <Button className="hero-image-button">{buttonText}</Button>
           )}

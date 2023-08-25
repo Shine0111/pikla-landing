@@ -40,19 +40,26 @@ const Header = () => {
             marginRight={16}
             onClick={() => navigate("/")}
             className="logo"
+            width="120px"
           />
           <Show above="lg">
             <HStack>
               {navLinks.map((link) => (
                 <Link key={link.title} margin={2}>
-                  <Heading size="sm">{link.title}</Heading>
+                  <Heading size="sm" fontWeight="20em">
+                    {link.title}
+                  </Heading>
                 </Link>
               ))}
             </HStack>
           </Show>
         </HStack>
         <HStack>
-          <Button backgroundColor="var(--dark-blue)" color="white">
+          <Button
+            backgroundColor="var(--primary-color)"
+            color="black"
+            fontWeight="2em"
+          >
             Download the app
           </Button>
           <Show above="lg">

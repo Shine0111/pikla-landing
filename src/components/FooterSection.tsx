@@ -21,6 +21,7 @@ import googlePlay from "../assets/google-play.webp";
 import apkDownload from "../assets/apk-download.webp";
 import services from "../data/services";
 import { Link } from "react-router-dom";
+import termsOfServices from "../data/terms-of-services";
 
 const FooterSection = () => {
   return (
@@ -30,6 +31,7 @@ const FooterSection = () => {
       }}
       className="innerWidth"
       justifyContent="space-between"
+      marginTop="10em"
     >
       <Stack
         direction={{
@@ -39,6 +41,7 @@ const FooterSection = () => {
           lg: "row",
         }}
         justifyContent="space-between"
+        paddingBottom="3em"
       >
         <VStack>
           <button className="footer-heading">
@@ -64,10 +67,14 @@ const FooterSection = () => {
           gap="10rem"
         >
           <VStack alignItems="flex-start">
-            <Heading className="footer-heading" fontSize="2xl">
+            <Heading
+              className="footer-heading"
+              fontSize="2xl"
+              color="var(--dark-blue)"
+            >
               Services
             </Heading>
-            <List>
+            <List fontWeight="bold">
               {services.map((service) => (
                 <ListItem key={service.title}>
                   <Link to={service.to}>{service.title}</Link>
@@ -77,10 +84,14 @@ const FooterSection = () => {
           </VStack>
 
           <VStack alignItems="flex-start">
-            <Heading className="footer-heading" fontSize="2xl">
+            <Heading
+              className="footer-heading"
+              fontSize="2xl"
+              color="var(--dark-blue)"
+            >
               Join our team
             </Heading>
-            <List>
+            <List fontWeight="bold">
               <ListItem>
                 <Link to="about-us">About us</Link>
               </ListItem>
@@ -100,10 +111,14 @@ const FooterSection = () => {
           </VStack>
 
           <VStack alignItems="flex-start">
-            <Heading className="footer-heading" fontSize="2xl">
+            <Heading
+              className="footer-heading"
+              fontSize="2xl"
+              color="var(--dark-blue)"
+            >
               About us
             </Heading>
-            <List>
+            <List fontWeight="bold">
               <ListItem>
                 <Link to="our-social-impact">Our Social Impact</Link>
               </ListItem>
@@ -115,6 +130,7 @@ const FooterSection = () => {
         </Stack>
         <Text>Lang</Text>
       </Stack>
+      {/* second footer part  */}
       <Divider />
       <Stack
         direction={{
@@ -124,13 +140,26 @@ const FooterSection = () => {
           lg: "row",
         }}
         justifyContent="space-between"
+        paddingTop="2em"
       >
         <div>
           <Text fontSize="xs">All rights reserved. Pikla © 2023</Text>
         </div>
-        <div>
-          <Text fontSize="xs">Terms of Service Privacy Policy</Text>
-        </div>
+        <Stack
+          direction={{
+            base: "column-reverse",
+            sm: "column-reverse",
+            md: "column-reverse",
+            lg: "row",
+          }}
+          spacing="1.5em"
+        >
+          {termsOfServices.map((termsOfService) => (
+            <Link key={termsOfService.title} to={termsOfService.to}>
+              <Text fontSize="xs">{termsOfService.title}</Text>
+            </Link>
+          ))}
+        </Stack>
 
         <HStack>
           <IconButton

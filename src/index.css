@@ -1,11 +1,12 @@
 :root {
   padding: 0%;
-    --primary-color: #3498db;
+    --primary-color: rgba(6,190,225,1);
     --secondary-color: #e74c3c;
     --primary-gradient: linear-gradient(0.25turn, rgba(6,190,225,1), rgba(36,110,185,0.81) 70%, rgba(34,95,146,0.84) 100%);
     --gray-background: #f6f6f6;
     --text-color: #333;
     --dark-blue:  #1F5673;
+    --blue-bluer: rgba(36,110,185,0.81);
   }
 button:hover {
   cursor: pointer;
@@ -117,6 +118,12 @@ button:hover {
 .hero-image-container {
   position: relative;
   height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background: var(--primary-gradient);
+  border-radius: 1.5em;
 }
 .hero-image-button {
   position: absolute;
