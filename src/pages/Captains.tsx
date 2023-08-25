@@ -1,4 +1,4 @@
-import { SimpleGrid, VStack, Text } from "@chakra-ui/react";
+import { SimpleGrid, VStack } from "@chakra-ui/react";
 import Hero from "../components/Hero";
 import benefits from "../data/benefits";
 import BenefitCard from "../components/BenefitCard";
