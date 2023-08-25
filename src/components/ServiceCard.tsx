@@ -4,7 +4,6 @@ import {
   CardBody,
   CardFooter,
   CardHeader,
-  Heading,
   IconButton,
   Link,
   List,
@@ -36,7 +35,7 @@ const ServiceCard = ({
       justifyContent="space-between"
     >
       <CardHeader>
-        <Heading size="3xl">{heading}</Heading>
+        <h1 className="font-quicksand heading">{heading}</h1>
       </CardHeader>
       <CardBody gap="2rem">
         {categories.map((category) => (

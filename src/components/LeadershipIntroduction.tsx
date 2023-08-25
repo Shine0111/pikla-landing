@@ -1,4 +1,4 @@
-import { Heading, Stack } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 
 const LeadershipIntroduction = () => {
   return (
@@ -14,7 +14,7 @@ const LeadershipIntroduction = () => {
         lg: "row",
       }}
     >
-      <Heading>Pikla Leadership</Heading>
+      <h1 className="font-quicksand heading">Pikla Leadership</h1>
       <p>
         {" "}
         Pikla was started by name, who wanted to solve the problem of <br />

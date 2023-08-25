@@ -1,18 +1,20 @@
-import { Heading, SimpleGrid, VStack, Text } from "@chakra-ui/react";
+import { SimpleGrid, VStack, Text } from "@chakra-ui/react";
 import Hero from "../components/Hero";
 import benefits from "../data/benefits";
 import BenefitCard from "../components/BenefitCard";
 import StatSection from "../components/StatSection";
 import Section from "../components/Section";
 import TopQuestions from "../components/TopQuestions";
-// import CaptainsSlide from "../components/CaptainsSlide";
+import CaptainsSlide from "../components/CaptainsSlide";
 
 const Captains = () => {
   return (
     <div>
       <Hero buttoned buttonText="Sign Up" />
       <div className="innerWidth">
-        <Heading textAlign="center">Captains benefits</Heading>
+        <h1 style={{ textAlign: "center" }} className="font-quicksand heading">
+          Captains benefits
+        </h1>
       </div>
       <SimpleGrid
         className="sectionInnerWidth"
@@ -53,10 +55,17 @@ const Captains = () => {
       />
       <VStack className="custom-background" paddingBottom="10rem">
         <div className="innerWidth">
-          <Heading textAlign="center">Meet the Captains</Heading>
+          <h1
+            className="font-quicksand heading"
+            style={{ textAlign: "center" }}
+          >
+            Meet the Captains
+          </h1>
         </div>
-        {/* <CaptainsSlide /> */}
-        <Text>this section is still on dev ...</Text>
+
+        <div className="sectionInnerWidth">
+          <CaptainsSlide />
+        </div>
       </VStack>
       <div className="innerWidth">
         <TopQuestions />

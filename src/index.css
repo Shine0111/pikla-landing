@@ -1,68 +1,96 @@
 :root {
   padding: 0%;
-    --primary-color: rgba(6,190,225,1);
-    --secondary-color: #e74c3c;
-    --primary-gradient: linear-gradient(0.25turn, rgba(6,190,225,1), rgba(36,110,185,0.81) 70%, rgba(34,95,146,0.84) 100%);
-    --gray-background: #f6f6f6;
-    --text-color: #333;
-    --dark-blue:  #1F5673;
-    --blue-bluer: rgba(36,110,185,0.81);
-  }
+  --primary-color: rgba(6, 190, 225, 1);
+  --secondary-color: #e74c3c;
+  --primary-gradient: linear-gradient(0.25turn, rgba(6, 190, 225, 1), rgba(36, 110, 185, 0.81) 70%, rgba(34, 95, 146, 0.84) 100%);
+  --gray-background: #f6f6f6;
+  --text-color: #333;
+  --dark-blue: #1F5673;
+  --blue-bluer: rgba(36, 110, 185, 0.81);
+  font-family: 'Quicksand', sans-serif;
+}
+
+.font-quicksand {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+
+
 button:hover {
   cursor: pointer;
 }
 
-  /* custom scrollbar */
-  /* width */
+/* custom scrollbar */
+/* width */
 ::-webkit-scrollbar {
   width: 16px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #c7c7c7; 
+  background: #c7c7c7;
   height: 16px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #a5a5a5; 
+  background: #a5a5a5;
 }
-  .vl {
-    border-left: 3px solid var(--dark-blue);
 
-  }
-  
+.vl {
+  border-left: 3px solid var(--dark-blue);
+
+}
+
 
 .innerWidth {
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 1.5rem;/* Apply padding for spacing */
-    max-width: 1350px; /* Set a maximum width for larger screens */
-  }
-  .sectionInnerWidth {
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 1.5rem;/* Apply padding for spacing */
-    max-width: 1150px; /* Set a maximum width for larger screens */
-  }
-  .top-questions-innerWidth {
-    margin: 0 auto; /* Center the container horizontally */
-    margin-top: 4rem;
-    margin-bottom: 5rem;
-    padding: 1.5rem;/* Apply padding for spacing */
-    max-width: 1300px; /* Set a maximum width for larger screens */
+  margin: 0 auto;
+  /* Center the container horizontally */
+  padding: 1.5rem;
+  /* Apply padding for spacing */
+  max-width: 1350px;
+  /* Set a maximum width for larger screens */
+  font-family: 'Quicksand', sans-serif;
+}
 
-  }
+.sectionInnerWidth {
+  margin: 0 auto;
+  /* Center the container horizontally */
+  padding: 1.5rem;
+  /* Apply padding for spacing */
+  max-width: 1150px;
+  /* Set a maximum width for larger screens */
+}
+
+.top-questions-innerWidth {
+  margin: 0 auto;
+  /* Center the container horizontally */
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+  padding: 1.5rem;
+  /* Apply padding for spacing */
+  max-width: 1300px;
+  /* Set a maximum width for larger screens */
+
+}
+
 .logo:hover {
   cursor: pointer;
 }
-  .width100 {
-    width: 100%;
-  }
+
+.width100 {
+  width: 100%;
+}
 
 .parent-container {
   position: relative;
@@ -74,6 +102,7 @@ button:hover {
 
 
 }
+
 .content-parent {
 
   margin-top: 1rem;
@@ -89,27 +118,32 @@ button:hover {
 
 .custom-background {
   position: relative;
-  padding: 20px; 
+  padding: 20px;
   margin-top: 2rem;
-  color: white; /* Text color to contrast with the background */
+  color: white;
+  /* Text color to contrast with the background */
 
   /* Create the stairs background using linear gradients */
-  background: linear-gradient(0.25turn, rgba(6,190,225,1), rgba(36,110,185,0.81) 70%, rgba(34,95,146,0.84) 100%);  /* background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%, 100% 100%; */
+  background: linear-gradient(0.25turn, rgba(6, 190, 225, 1), rgba(36, 110, 185, 0.81) 70%, rgba(34, 95, 146, 0.84) 100%);
+  /* background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%, 100% 100%; */
   /* background-position: left top, right top, left bottom, right bottom, center center; */
   /* background-repeat: no-repeat; */
 
   /* Clip the content inside the background shape */
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
+
 .nav-background {
   background: white;
   position: fixed;
   width: 100%;
   z-index: 1000;
 }
+
 .nav-shadow {
   box-shadow: 0px 0.5px 3px gray;
 }
+
 .margin-bottom {
   margin-bottom: 10rem;
 }
@@ -125,6 +159,7 @@ button:hover {
   background: var(--primary-gradient);
   border-radius: 1.5em;
 }
+
 .hero-image-button {
   position: absolute;
 
@@ -146,15 +181,15 @@ button:hover {
   content: "";
   position: absolute;
   width: 100vw; /* Full viewport width */
-  /* height: 10px; Adjust as needed */
-  /* background-color: #3498db; */
+/* height: 10px; Adjust as needed */
+/* background-color: #3498db; */
 
-  /* Position the pseudo-elements to create the angled bottom */
-  /* bottom: -5px;
+/* Position the pseudo-elements to create the angled bottom */
+/* bottom: -5px;
   left: 0;
   transform: skew(-20deg); /* Adjust the angle as needed */
-  /* transform-origin: left bottom; */
-/* } */ 
+/* transform-origin: left bottom; */
+/* } */
 
 /* .custom-background::after {
   left: auto;
@@ -175,6 +210,7 @@ button:hover {
   color: white;
   margin: 1.5rem;
 }
+
 .accordion-heading {
   display: flex;
   flex-direction: 'row';
@@ -182,9 +218,11 @@ button:hover {
   font-weight: bold;
   font-size: 1.5rem;
 }
+
 .accordion-heading:hover {
   cursor: pointer;
 }
+
 .footer-heading {
   padding-bottom: 1.5rem;
 }

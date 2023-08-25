@@ -1,7 +1,6 @@
 import {
   Card,
   CardBody,
-  Heading,
   Stack,
   Image,
   Text,
@@ -49,7 +48,9 @@ const ProfileCard = ({
       </CardBody>
       <CardFooter>
         <Stack mt="6" spacing="3">
-          <Heading size="md">{heading}</Heading>
+          <h4 className="font-quicksand" style={{ fontWeight: "bold" }}>
+            {heading}
+          </h4>
           <Text>{position}</Text>
           {socialLink === true && (
             <IconButton

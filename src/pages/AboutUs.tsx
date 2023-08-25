@@ -1,4 +1,4 @@
-import { Box, Heading, Stack } from "@chakra-ui/react";
+import { Box, Stack } from "@chakra-ui/react";
 import Hero from "../components/Hero";
 import ParagraphContainer from "../components/ParagraphContainer";
 import LeadershipIntroduction from "../components/LeadershipIntroduction";
@@ -13,7 +13,7 @@ const AboutUs = () => {
       <Box className="innerWidth">
         <ParagraphContainer>
           <Stack>
-            <Heading className="titlePadding">About us</Heading>
+            <h1 className="titlePadding font-quicksand heading">About us</h1>
             <Box>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero

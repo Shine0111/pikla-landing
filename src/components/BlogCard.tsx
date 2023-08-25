@@ -13,10 +13,17 @@ interface Props {
   imageSrc: string;
   heading: string;
   description: string;
-  onClick: () => void;
+  buttoned?: boolean;
+  onClick?: () => void;
 }
 
-const BlogCard = ({ imageSrc, heading, description, onClick }: Props) => {
+const BlogCard = ({
+  imageSrc,
+  heading,
+  description,
+  buttoned,
+  onClick,
+}: Props) => {
   return (
     <Card maxW="sm" background="none">
       <CardBody>
@@ -31,9 +38,11 @@ const BlogCard = ({ imageSrc, heading, description, onClick }: Props) => {
         </Stack>
       </CardBody>
       <CardFooter>
-        <Button variant="solid" colorScheme="blue" onClick={onClick}>
-          Read more
-        </Button>
+        {buttoned && (
+          <Button variant="solid" colorScheme="blue" onClick={onClick}>
+            Read more
+          </Button>
+        )}
       </CardFooter>
     </Card>
   );

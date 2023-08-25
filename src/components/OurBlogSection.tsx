@@ -1,11 +1,12 @@
-import { Heading } from "@chakra-ui/react";
 import BlogsSlide from "./BlogsSlide";
 
 const OurBlogSection = () => {
   return (
     <div className="custom-background">
       <div className="innerWidth">
-        <Heading color="black">Our Blog</Heading>
+        <h1 className="font-quicksand heading" style={{ color: "black" }}>
+          Our Blog
+        </h1>
       </div>
       {/* <HStack className="innerWidth " paddingBottom={10}>
         {fakeBlogs.map((fakeBlog) => (

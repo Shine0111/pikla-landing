@@ -1,4 +1,4 @@
-import { VStack, Image, Heading, Text, Button, Stack } from "@chakra-ui/react";
+import { VStack, Image, Text, Button, Stack } from "@chakra-ui/react";
 import team from "../assets/team-pexels.jpg";
 
 interface Props {
@@ -22,7 +22,7 @@ const Section = ({
     return (
       <div className={backgrounded ? "custom-background" : ""}>
         <Stack
-          className="sectionInnerWidth "
+          className="sectionInnerWidth font-quicksand"
           spacing={24}
           direction={{
             base: "column",
@@ -40,7 +40,7 @@ const Section = ({
             objectFit="cover"
           />
           <VStack alignItems="flex-start" spacing={5} justifyContent="center">
-            <Heading>{heading}</Heading>
+            <h1 className="font-quicksand heading">{heading}</h1>
             <Text>{description}</Text>
 
             <Button onClick={onClick}>
@@ -54,7 +54,7 @@ const Section = ({
   return (
     <div className={backgrounded ? "custom-background" : ""}>
       <Stack
-        className="sectionInnerWidth"
+        className="sectionInnerWidth font-quicksand"
         spacing={24}
         direction={{
           base: "column-reverse",
@@ -65,7 +65,7 @@ const Section = ({
         color={"black"}
       >
         <VStack alignItems="flex-start" spacing={5} justifyContent="center">
-          <Heading>{heading}</Heading>
+          <h1 className="font-quicksand heading">{heading}</h1>
           <Text>{description}</Text>
 
           <Button onClick={onClick}>

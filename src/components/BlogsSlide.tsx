@@ -38,6 +38,7 @@ const BlogsSlide = () => {
             imageSrc={fakeBlog.src}
             heading={fakeBlog.title}
             description={fakeBlog.description}
+            buttoned
             onClick={() => console.log("clicked", fakeBlog.title)}
           />
         </SwiperSlide>

@@ -46,9 +46,9 @@ const Header = () => {
             <HStack>
               {navLinks.map((link) => (
                 <Link key={link.title} margin={2}>
-                  <Heading size="sm" fontWeight="20em">
+                  <h2 className="font-quicksand" style={{ fontWeight: "bold" }}>
                     {link.title}
-                  </Heading>
+                  </h2>
                 </Link>
               ))}
             </HStack>

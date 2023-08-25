@@ -1,7 +1,6 @@
 import {
   Card,
   CardHeader,
-  Heading,
   CardBody,
   CardFooter,
   Text,
@@ -27,9 +26,12 @@ const BenefitCard = ({ imageSrc, heading, description }: Props) => {
         <Image src={imageSrc} />
       </CardHeader>
       <CardBody>
-        <Heading color="black" fontSize="xl">
+        <h3
+          style={{ color: "black", fontWeight: "bold" }}
+          className="font-quicksand"
+        >
           {heading}
-        </Heading>
+        </h3>
       </CardBody>
       <CardFooter>
         <Text color="black">{description}</Text>

@@ -1,4 +1,4 @@
-import { Stack, Heading, VStack } from "@chakra-ui/react";
+import { Stack, VStack } from "@chakra-ui/react";
 
 interface Props {
   number0: string;
@@ -26,18 +26,18 @@ const StatSection = ({
       color="black"
     >
       <VStack>
-        <Heading>{number0}</Heading>
-        <Heading fontSize="lg">{text0}</Heading>
+        <h1 className="font-quicksand heading">{number0}</h1>
+        <h2 className="font-quicksand heading">{text0}</h2>
       </VStack>
       <div className="vl"></div>
       <VStack>
-        <Heading>{number1}</Heading>
-        <Heading fontSize="lg">{text1}</Heading>
+        <h1 className="font-quicksand heading">{number1}</h1>
+        <h2 className="font-quicksand heading">{text1}</h2>
       </VStack>
       <div className="vl"></div>
       <VStack>
-        <Heading>{number2}</Heading>
-        <Heading fontSize="lg">{text2}</Heading>
+        <h1 className="font-quicksand heading">{number2}</h1>
+        <h2 className="font-quicksand heading">{text2}</h2>
       </VStack>
     </Stack>
   );
