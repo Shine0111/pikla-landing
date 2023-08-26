@@ -11,6 +11,8 @@ import {
 
 interface Props {
   imageSrc: string;
+  imageBorderRadius?: string;
+  imageBoxSize?: string;
   heading: string;
   description: string;
   buttoned?: boolean;
@@ -19,6 +21,8 @@ interface Props {
 
 const BlogCard = ({
   imageSrc,
+  imageBorderRadius,
+  imageBoxSize,
   heading,
   description,
   buttoned,
@@ -30,7 +34,9 @@ const BlogCard = ({
         <Image
           src={imageSrc}
           alt="Green double couch with wooden legs"
-          borderRadius="lg"
+          objectFit="cover"
+          borderRadius={imageBorderRadius ? imageBorderRadius : "lg"}
+          boxSize={imageBoxSize}
         />
         <Stack mt="6" spacing="3">
           <Heading size="md">{heading}</Heading>

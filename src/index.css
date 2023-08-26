@@ -84,6 +84,11 @@ button:hover {
 
 }
 
+.captains-slide-innerWidth {
+  max-width: 1240px;
+
+}
+
 .logo:hover {
   cursor: pointer;
 }

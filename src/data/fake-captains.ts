@@ -10,25 +10,24 @@ const captains: Captain[] = [
   {
     name: "Inge Fearchar",
     picture: pic,
-    comment:
-      "“Careem has a support center and a 24/7 help line for all its Captains.”",
+    comment: "Pikla has a support center and a 24/7 help line.”",
   },
   {
     name: "Varda Inbar",
     picture: pic,
-    comment: "“With Careem, I can work at any time and be my own boss.”",
+    comment: "“With Pikla, I can work at any time and be my own boss.”",
   },
   {
     name: "Ljerka Laurentia",
     picture: pic,
     comment:
-      "“Careem enables me to maximize my earnings and improve my lifestyle.”",
+      "Pikla enables me to maximize my earnings and improve my lifestyle.”",
   },
   {
     name: "Ljerka Laurentia",
     picture: pic,
     comment:
-      "“Careem enables me to maximize my earnings and improve my lifestyle.”",
+      "Pikla enables me to maximize my earnings and improve my lifestyle.”",
   },
 ];
 
