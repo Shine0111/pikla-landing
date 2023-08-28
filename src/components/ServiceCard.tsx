@@ -8,10 +8,11 @@ import {
   Link,
   List,
 } from "@chakra-ui/react";
+import { SubSlink } from "../data/services";
 
 interface Props {
   heading: string;
-  categories: string[];
+  categories: SubSlink[];
   onClick: () => void;
   background: string;
   color?: string;
@@ -40,8 +41,8 @@ const ServiceCard = ({
       <CardBody gap="2rem">
         {categories.map((category) => (
           <List>
-            <Link key={category} fontWeight="bold" fontSize="lg">
-              {category}
+            <Link key={category.text} fontWeight="bold" fontSize="lg">
+              {category.text}
             </Link>
           </List>
         ))}

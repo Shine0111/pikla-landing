@@ -10,8 +10,12 @@ import {
   TabPanel,
   TabPanels,
   Tabs,
+  VStack,
 } from "@chakra-ui/react";
 import MenuAccordion from "./MenuAccordion";
+import services from "../data/services";
+import { Link } from "react-router-dom";
+import Header from "./Header";
 
 interface Props {
   onClose: () => void;
@@ -23,24 +27,31 @@ const MenuMobile = ({ onClose, isOpen }: Props) => {
     <Drawer placement="top" onClose={onClose} isOpen={isOpen} size="full">
       <DrawerOverlay />
       <DrawerContent>
-        <DrawerHeader borderBottomWidth="1px">
+        <DrawerHeader borderBottomWidth="1px" marginTop="2.5em">
           <Tabs>
-            <TabList>
-              <Tab>One</Tab>
-              <Tab>Two</Tab>
-              <Tab>Three</Tab>
+            <TabList background="#f6f6f6">
+              {services.map((service) => (
+                <Tab key={service.title}>
+                  <h1 className="font-quicksand headingSm">{service.title}</h1>
+                </Tab>
+              ))}
             </TabList>
 
             <TabPanels>
-              <TabPanel>
-                <p>one!</p>
-              </TabPanel>
-              <TabPanel>
-                <p>two!</p>
-              </TabPanel>
-              <TabPanel>
-                <p>three!</p>
-              </TabPanel>
+              {services.map((service) => (
+                <TabPanel key={service.title}>
+                  {service.categories.map((category) => (
+                    <VStack alignItems="flex-start" spacing={0}>
+                      <Link
+                        to={category.onClick}
+                        className="font-quicksand service-card-link"
+                      >
+                        {category.text}
+                      </Link>
+                    </VStack>
+                  ))}
+                </TabPanel>
+              ))}
             </TabPanels>
           </Tabs>
         </DrawerHeader>

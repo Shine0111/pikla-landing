@@ -1,7 +1,6 @@
 import {
   Button,
   HStack,
-  Heading,
   IconButton,
   Image,
   Link,
@@ -73,8 +72,8 @@ const Header = () => {
             />
           </Show>
         </HStack>
-        <MenuMobile onClose={onClose} isOpen={isOpen} />
       </HStack>
+      <MenuMobile onClose={onClose} isOpen={isOpen} />
     </div>
   );
 };
