@@ -3,7 +3,6 @@ import {
   HStack,
   IconButton,
   Image,
-  Link,
   Show,
   Text,
   useDisclosure,
@@ -14,6 +13,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import MenuMobile from "./MenuMobile";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -43,10 +43,10 @@ const Header = () => {
           />
           <Show above="lg">
             <HStack>
-              {navLinks.map((link) => (
-                <Link key={link.title} margin={2}>
+              {navLinks.map((navLink) => (
+                <Link key={navLink.title} to={navLink.to}>
                   <h2 className="font-quicksand" style={{ fontWeight: "bold" }}>
-                    {link.title}
+                    {navLink.title}
                   </h2>
                 </Link>
               ))}

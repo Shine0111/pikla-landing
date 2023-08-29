@@ -4,11 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import ServiceCard from "./ServiceCard";
 import services from "../data/services";
-import { Box } from "@chakra-ui/react";
 
 const ServicesSlide = () => {
   return (
-    <Box className="innerWidth">
+    <div className="innerWidth" id="service">
       <Swiper
         spaceBetween={20}
         slidesPerView={4}
@@ -46,7 +45,7 @@ const ServicesSlide = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </Box>
+    </div>
   );
 };
 

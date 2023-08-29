@@ -1,11 +1,12 @@
 interface NavLinks {
-    title: string;
+  title: string;
+  to: string;
 }
 
 const navLinks: NavLinks[] = [
-    { title: 'Services'},
-    { title: 'Partners' },
-    { title: 'About us' },
+  { title: "Services", to: "#service" },
+  { title: "Partners", to: "#" },
+  { title: "About us", to: "#" },
 ];
 
 export default navLinks;
