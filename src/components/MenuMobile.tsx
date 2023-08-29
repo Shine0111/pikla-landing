@@ -25,7 +25,7 @@ const MenuMobile = ({ onClose, isOpen }: Props) => {
     <Drawer placement="top" onClose={onClose} isOpen={isOpen} size="full">
       <DrawerOverlay />
       <DrawerContent>
-        <DrawerHeader borderBottomWidth="1px" marginTop="2.5em">
+        <DrawerHeader borderBottomWidth="1px" marginTop="1.5em">
           <Tabs>
             <TabList
               background="#f6f6f6"

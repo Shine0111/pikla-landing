@@ -5,8 +5,12 @@ import {
   AccordionButton,
   AccordionIcon,
   AccordionPanel,
+  List,
+  ListItem,
+  VStack,
 } from "@chakra-ui/react";
 import navLinks from "../data/nav-links";
+import { Link } from "react-router-dom";
 
 const MenuAccordion = () => {
   return (
@@ -22,10 +26,33 @@ const MenuAccordion = () => {
                 <AccordionIcon />
               </AccordionButton>
               <AccordionPanel pb={4}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                {navLink.title === "About us" && (
+                  <VStack alignItems="flex-start" marginLeft="1em">
+                    <List
+                      fontWeight="bold"
+                      spacing="0.5em"
+                      color="var(--dark-blue)"
+                    >
+                      <ListItem>
+                        <Link to="about-us">About us</Link>
+                      </ListItem>
+                      <ListItem>
+                        <Link to="engineering-at-pikla">
+                          Engineering at pikla
+                        </Link>
+                      </ListItem>
+                      <ListItem>
+                        <Link to="/">Careers</Link>
+                      </ListItem>
+                      <ListItem>
+                        <Link to="/">Explore open roles</Link>
+                      </ListItem>
+                      <ListItem>
+                        <Link to="/">Why Pikla</Link>
+                      </ListItem>
+                    </List>
+                  </VStack>
+                )}
               </AccordionPanel>
             </AccordionItem>
           );

@@ -55,7 +55,7 @@ const services: Services[] = [
     to: "/",
   },
   {
-    title: "Get Anything",
+    title: "Get ",
     categories: [
       {
         text: "Medicines",

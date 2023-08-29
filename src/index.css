@@ -192,6 +192,27 @@ button:hover {
   margin: 5px;
 }
 
+a {
+  position: relative;
+  text-decoration: none;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  transition: width 0.5s ease-in;
+}
+
+a:hover {
+  color: var(--blue-bluer);
+}
+
+a:hover::before {
+  width: 100%;
+}
+
 
 /* Pseudo-elements to create the angled bottom */
 /* .custom-background::before,
