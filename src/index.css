@@ -244,3 +244,19 @@ button:hover {
 .footer-heading {
   padding-bottom: 1.5rem;
 }
+
+/* overrides */
+.drawer-container {
+  -webkit-flex: 0;
+  -ms-flex: 0;
+  flex: 0;
+  -webkit-padding-start: 0;
+  padding-inline-start: 0;
+  -webkit-padding-end: 0;
+  padding-inline-end: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  border-bottom-width: 1px;
+  margin-top: 2.5em;
+}

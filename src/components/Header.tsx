@@ -73,7 +73,9 @@ const Header = () => {
           </Show>
         </HStack>
       </HStack>
-      <MenuMobile onClose={onClose} isOpen={isOpen} />
+      <Show below="lg">
+        <MenuMobile onClose={onClose} isOpen={isOpen} />
+      </Show>
     </div>
   );
 };

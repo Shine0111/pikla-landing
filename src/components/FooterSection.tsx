@@ -65,9 +65,14 @@ const FooterSection = () => {
             lg: "row",
           }}
           gap="10rem"
-          alignItems="center"
+          alignItems={{
+            base: "center",
+            sm: "center",
+            md: "center",
+            lg: "flex-start",
+          }}
         >
-          <VStack alignItems="flex-start">
+          <VStack alignItems={"flex-start"}>
             <Heading
               className="footer-heading"
               fontSize="2xl"
@@ -141,7 +146,7 @@ const FooterSection = () => {
           lg: "row",
         }}
         justifyContent="space-between"
-        // alignItems={{ sm: "center" }}
+        alignItems={{ sm: "center" }}
         paddingTop="2em"
       >
         <div>

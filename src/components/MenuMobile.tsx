@@ -1,6 +1,5 @@
 import {
   Drawer,
-  DrawerBody,
   DrawerCloseButton,
   DrawerContent,
   DrawerHeader,
@@ -15,7 +14,6 @@ import {
 import MenuAccordion from "./MenuAccordion";
 import services from "../data/services";
 import { Link } from "react-router-dom";
-import Header from "./Header";
 
 interface Props {
   onClose: () => void;
@@ -29,7 +27,10 @@ const MenuMobile = ({ onClose, isOpen }: Props) => {
       <DrawerContent>
         <DrawerHeader borderBottomWidth="1px" marginTop="2.5em">
           <Tabs>
-            <TabList background="#f6f6f6">
+            <TabList
+              background="#f6f6f6"
+              style={{ borderRadius: "1.25em 1.25em 0em 0em " }}
+            >
               {services.map((service) => (
                 <Tab key={service.title}>
                   <h1 className="font-quicksand headingSm">{service.title}</h1>
@@ -55,9 +56,7 @@ const MenuMobile = ({ onClose, isOpen }: Props) => {
             </TabPanels>
           </Tabs>
         </DrawerHeader>
-        <DrawerBody>
-          <MenuAccordion />
-        </DrawerBody>
+        <MenuAccordion />
         <DrawerCloseButton />
       </DrawerContent>
     </Drawer>
