@@ -13,6 +13,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 import MenuMobile from "./MenuMobile";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -43,13 +44,25 @@ const Header = () => {
           />
           <Show above="lg">
             <HStack>
-              {navLinks.map((navLink) => (
-                <Link key={navLink.title} to={navLink.to}>
-                  <h2 className="font-quicksand" style={{ fontWeight: "bold" }}>
-                    {navLink.title}
-                  </h2>
-                </Link>
-              ))}
+              <HashLink to="#section">
+                <h2 className="font-quicksand" style={{ fontWeight: "bold" }}>
+                  Services
+                </h2>
+              </HashLink>
+
+              {navLinks.map((navLink) => {
+                if (navLink.title === "Services") return null;
+                return (
+                  <Link key={navLink.title} to={navLink.to}>
+                    <h2
+                      className="font-quicksand"
+                      style={{ fontWeight: "bold" }}
+                    >
+                      {navLink.title}
+                    </h2>
+                  </Link>
+                );
+              })}
             </HStack>
           </Show>
         </HStack>
