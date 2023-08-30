@@ -68,8 +68,9 @@ const Header = () => {
         </HStack>
         <HStack>
           <Button
-            backgroundColor="var(--primary-color)"
-            color="black"
+            background="var(--blue-bluer)"
+            colorScheme="blue"
+            color="white"
             fontWeight="2em"
           >
             Download the app

@@ -43,7 +43,7 @@ const FooterSection = () => {
         justifyContent="space-between"
         paddingBottom="3em"
       >
-        <VStack>
+        <VStack spacing="1em">
           <button className="footer-heading">
             <Image src={logo} width="125px" />
           </button>

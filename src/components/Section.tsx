@@ -47,6 +47,7 @@ const Section = ({
               onClick={onClick}
               background={!backgrounded ? "var(--blue-bluer)" : "white"}
               color={!backgrounded ? "white" : ""}
+              colorScheme={!backgrounded ? "blue" : ""}
             >
               {buttonText ? buttonText : "Read more"}
             </Button>
@@ -75,7 +76,8 @@ const Section = ({
           <Button
             onClick={onClick}
             background={!backgrounded ? "var(--blue-bluer)" : "white"}
-            color={!backgrounded ? "white" : ""}
+            color={!backgrounded ? "white" : "black"}
+            colorScheme={!backgrounded ? "blue" : ""}
           >
             {buttonText ? buttonText : "Read more"}
           </Button>

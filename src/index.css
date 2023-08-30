@@ -24,17 +24,31 @@
   font-size: large;
 }
 
+button {
+  border: none;
+  outline: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-3.5px);
+}
 
 
-.button {
+.accordion {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #ffffff;
   border: none;
   outline: none;
   transition: transform 0.2s ease-in-out;
 }
 
-.button:hover {
+.accordion:hover {
   transform: translateY(-10px);
 }
+
 
 /* custom scrollbar */
 /* width */
