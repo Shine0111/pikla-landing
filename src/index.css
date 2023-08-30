@@ -26,8 +26,14 @@
 
 
 
-button:hover {
-  cursor: pointer;
+.button {
+  border: none;
+  outline: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button:hover {
+  transform: translateY(-10px);
 }
 
 /* custom scrollbar */

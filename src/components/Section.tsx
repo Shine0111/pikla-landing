@@ -43,7 +43,11 @@ const Section = ({
             <h1 className="font-quicksand heading">{heading}</h1>
             <Text>{description}</Text>
 
-            <Button onClick={onClick}>
+            <Button
+              onClick={onClick}
+              background={!backgrounded ? "var(--blue-bluer)" : "white"}
+              color={!backgrounded ? "white" : ""}
+            >
               {buttonText ? buttonText : "Read more"}
             </Button>
           </VStack>
@@ -68,7 +72,11 @@ const Section = ({
           <h1 className="font-quicksand heading">{heading}</h1>
           <Text>{description}</Text>
 
-          <Button onClick={onClick}>
+          <Button
+            onClick={onClick}
+            background={!backgrounded ? "var(--blue-bluer)" : "white"}
+            color={!backgrounded ? "white" : ""}
+          >
             {buttonText ? buttonText : "Read more"}
           </Button>
         </VStack>
