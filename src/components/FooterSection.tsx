@@ -10,11 +10,6 @@ import {
   List,
   ListItem,
 } from "@chakra-ui/react";
-import { MdFacebook } from "react-icons/md";
-import { AiFillTwitterCircle } from "react-icons/ai";
-import { TiSocialLinkedinCircular } from "react-icons/ti";
-import { TiSocialInstagramCircular } from "react-icons/ti";
-
 import logo from "../assets/logo-long.png";
 import appStore from "../assets/app-store.webp";
 import googlePlay from "../assets/google-play.webp";
@@ -22,6 +17,7 @@ import apkDownload from "../assets/apk-download.webp";
 import services from "../data/services";
 import { Link } from "react-router-dom";
 import termsOfServices from "../data/terms-of-services";
+import socialButtons from "../data/social-buttons";
 
 const FooterSection = () => {
   return (
@@ -169,26 +165,14 @@ const FooterSection = () => {
         </Stack>
 
         <HStack>
-          <IconButton
-            aria-label="facebook"
-            icon={<MdFacebook />}
-            background="none"
-          />
-          <IconButton
-            aria-label="twitter"
-            icon={<AiFillTwitterCircle />}
-            background="none"
-          />
-          <IconButton
-            aria-label="linkedin"
-            icon={<TiSocialLinkedinCircular />}
-            background="none"
-          />
-          <IconButton
-            aria-label="instagram"
-            icon={<TiSocialInstagramCircular />}
-            background="none"
-          />
+          {socialButtons.map((socialButton) => (
+            <IconButton
+              key={socialButton.ariaLabel}
+              aria-label={socialButton.ariaLabel}
+              icon={<socialButton.icon />}
+              background="none"
+            />
+          ))}
         </HStack>
       </Stack>
     </Stack>
