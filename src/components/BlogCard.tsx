@@ -20,25 +20,36 @@ const BlogCard = ({
   onClick,
 }: Props) => {
   return (
-    <Stack maxW="sm" direction="column" color="black">
+    <Stack
+      maxW="sm"
+      direction="column"
+      color="black"
+      spacing="2em"
+      marginTop="2em"
+    >
       <Stack alignItems="center">
         <Image
           src={imageSrc}
           alt="Green double couch with wooden legs"
           objectFit="cover"
-          borderRadius={imageBorderRadius ? imageBorderRadius : "lg"}
+          borderRadius={imageBorderRadius ? imageBorderRadius : "30px"}
           boxSize={imageBoxSize}
         />
         <Stack mt="6" spacing="3">
           <Heading size="md" textAlign="center">
             {heading}
           </Heading>
-          <Text>{description}</Text>
+          <Text fontWeight="semibold">{description}</Text>
         </Stack>
       </Stack>
       <Box>
         {buttoned && (
-          <Button variant="solid" colorScheme="blue" onClick={onClick}>
+          <Button
+            variant="solid"
+            background="white"
+            color="black"
+            onClick={onClick}
+          >
             Read more
           </Button>
         )}
