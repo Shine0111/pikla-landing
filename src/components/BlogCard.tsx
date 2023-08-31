@@ -1,13 +1,4 @@
-import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  Heading,
-  Stack,
-  Image,
-  Text,
-} from "@chakra-ui/react";
+import { Button, Heading, Stack, Image, Text, Box } from "@chakra-ui/react";
 
 interface Props {
   imageSrc: string;
@@ -29,8 +20,8 @@ const BlogCard = ({
   onClick,
 }: Props) => {
   return (
-    <Card maxW="sm" background="none">
-      <CardBody>
+    <Stack maxW="sm" direction="column" color="black">
+      <Stack alignItems="center">
         <Image
           src={imageSrc}
           alt="Green double couch with wooden legs"
@@ -39,18 +30,20 @@ const BlogCard = ({
           boxSize={imageBoxSize}
         />
         <Stack mt="6" spacing="3">
-          <Heading size="md">{heading}</Heading>
+          <Heading size="md" textAlign="center">
+            {heading}
+          </Heading>
           <Text>{description}</Text>
         </Stack>
-      </CardBody>
-      <CardFooter>
+      </Stack>
+      <Box>
         {buttoned && (
           <Button variant="solid" colorScheme="blue" onClick={onClick}>
             Read more
           </Button>
         )}
-      </CardFooter>
-    </Card>
+      </Box>
+    </Stack>
   );
 };
 
