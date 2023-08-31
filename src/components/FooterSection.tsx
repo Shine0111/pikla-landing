@@ -146,7 +146,7 @@ const FooterSection = () => {
           lg: "row",
         }}
         justifyContent="space-between"
-        alignItems={{ sm: "center" }}
+        alignItems="center"
         paddingTop="2em"
       >
         <div>
