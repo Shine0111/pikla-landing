@@ -169,8 +169,9 @@ const FooterSection = () => {
             <IconButton
               key={socialButton.ariaLabel}
               aria-label={socialButton.ariaLabel}
-              icon={<socialButton.icon />}
+              icon={<socialButton.icon size={30} />}
               background="none"
+              size="lg"
             />
           ))}
         </HStack>
