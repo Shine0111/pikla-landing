@@ -17,7 +17,10 @@ const CustomAccordion = ({ heading, description }: AccordionProps) => {
     <div className="accordion sectionInnerWidth">
       <div className="accordion-heading">
         <h2 onClick={toggleAccordion}>{heading}</h2>
-        <button className="accordion-toggle" onClick={toggleAccordion}>
+        <button
+          className="accordion-toggle top-question-button"
+          onClick={toggleAccordion}
+        >
           {expanded ? <FiMinus size={25} /> : <FiPlus size={25} />}
         </button>
       </div>

@@ -109,6 +109,10 @@ button:hover {
 
 }
 
+.top-question-button {
+  background: var(--dark-blue);
+}
+
 .captains-slide-innerWidth {
   max-width: 1240px;
 
@@ -278,6 +282,7 @@ a:hover::before {
   flex-direction: column;
   color: white;
   margin: 1.5rem;
+  background: var(--dark-blue);
 }
 
 .accordion-heading {
