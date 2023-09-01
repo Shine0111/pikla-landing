@@ -35,7 +35,7 @@ const ServiceCard = ({
       color={color ? color : "white"}
       justifyContent="space-between"
     >
-      <CardHeader>
+      <CardHeader onClick={onClick}>
         <Link className="card-link" to="/">
           <h1 className="font-quicksand heading">{heading}</h1>
         </Link>
