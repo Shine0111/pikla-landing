@@ -220,16 +220,15 @@ button:hover {
   margin: 5px;
 }
 
-.card-link {
+#card-link {
   text-decoration: none;
 }
 
-.card-link:hover {
-  text-decoration: none;
-
+#card-link:hover {
+  color: white;
 }
 
-.card-link::before {
+#card-link::before {
   content: "";
   position: absolute;
   display: block;
@@ -241,7 +240,31 @@ button:hover {
   transition: transform 0.3s ease;
 }
 
-.card-link:hover::before {
+#card-link:hover::before {
+  transform: scaleX(0);
+}
+
+#card-link-reverse {
+  text-decoration: none;
+}
+
+#card-link-reverse:hover {
+  color: black;
+}
+
+#card-link-reverse::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0%;
+  height: 0px;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+#card-link-reverse:hover::before {
   transform: scaleX(0);
 }
 

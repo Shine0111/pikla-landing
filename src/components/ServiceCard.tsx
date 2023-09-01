@@ -36,14 +36,18 @@ const ServiceCard = ({
       justifyContent="space-between"
     >
       <CardHeader onClick={onClick}>
-        <Link className="card-link" to="/">
+        <Link id={heading === "Eat" ? "card-link-reverse" : "card-link"} to="/">
           <h1 className="font-quicksand heading">{heading}</h1>
         </Link>
       </CardHeader>
       <CardBody gap="2rem">
         {categories.map((category) => (
           <List>
-            <Link key={category.text} className="card-link" to={category.to}>
+            <Link
+              key={category.text}
+              id={heading === "Eat" ? "card-link-reverse" : "card-link"}
+              to={category.to}
+            >
               {category.text}
             </Link>
           </List>
