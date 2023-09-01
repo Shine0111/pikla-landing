@@ -4,8 +4,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import ServiceCard from "./ServiceCard";
 import services from "../data/services";
+import { useNavigate } from "react-router-dom";
 
 const ServicesSlide = () => {
+  const navigate = useNavigate();
   return (
     <div className="innerWidth" id="service">
       <Swiper
@@ -36,7 +38,7 @@ const ServicesSlide = () => {
           <SwiperSlide key={service.title}>
             <ServiceCard
               heading={service.title}
-              onClick={() => console.log("Clicked", service.title)}
+              onClick={() => navigate(service.to)}
               categories={service.categories}
               background={service.background}
               color={service.color}

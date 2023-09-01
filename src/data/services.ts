@@ -28,7 +28,7 @@ const services: Services[] = [
     ],
     background: "#3837e4",
     arrowColor: "white",
-    to: "/",
+    to: "/go",
   },
   {
     title: "Eat",
@@ -40,7 +40,7 @@ const services: Services[] = [
     ],
     background: "#d2ffd5",
     color: "black",
-    to: "/",
+    to: "/eat",
   },
   {
     title: "Delivery",
@@ -52,7 +52,7 @@ const services: Services[] = [
     ],
     background: "#7f5ffa",
     arrowColor: "white",
-    to: "/",
+    to: "/delivery",
   },
   {
     title: "Get ",
@@ -72,7 +72,7 @@ const services: Services[] = [
     ],
     background: "#001942",
     arrowColor: "white",
-    to: "/",
+    to: "/get",
   },
 ];
 

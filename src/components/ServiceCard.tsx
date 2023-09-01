@@ -5,10 +5,10 @@ import {
   CardFooter,
   CardHeader,
   IconButton,
-  Link,
   List,
 } from "@chakra-ui/react";
 import { SubSlink } from "../data/services";
+import { Link } from "react-router-dom";
 
 interface Props {
   heading: string;
@@ -36,12 +36,14 @@ const ServiceCard = ({
       justifyContent="space-between"
     >
       <CardHeader>
-        <h1 className="font-quicksand heading">{heading}</h1>
+        <Link className="card-link" to="/">
+          <h1 className="font-quicksand heading">{heading}</h1>
+        </Link>
       </CardHeader>
       <CardBody gap="2rem">
         {categories.map((category) => (
           <List>
-            <Link key={category.text} fontWeight="bold" fontSize="lg">
+            <Link key={category.text} className="card-link" to="/">
               {category.text}
             </Link>
           </List>
