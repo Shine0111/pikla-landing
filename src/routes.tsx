@@ -5,6 +5,10 @@ import AboutUs from "./pages/AboutUs";
 import Captains from "./pages/Captains";
 import Engineering from "./pages/Engineering";
 import SocialImpact from "./pages/SocialImpact";
+import Go from "./pages/Go";
+import Eat from "./pages/Eat";
+import Delivery from "./pages/Delivery";
+import Get from "./pages/Get";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +21,10 @@ const router = createBrowserRouter([
       { path: "captains", element: <Captains /> },
       { path: "engineering-at-pikla", element: <Engineering /> },
       { path: "our-social-impact", element: <SocialImpact /> },
+      { path: "go", element: <Go /> },
+      { path: "eat", element: <Eat /> },
+      { path: "delivery", element: <Delivery /> },
+      { path: "get", element: <Get /> },
     ],
   },
 ]);
