@@ -1,6 +1,6 @@
 export interface SubSlink {
   text: string;
-  onClick: string;
+  to: string;
 }
 interface Services {
   title: string;
@@ -15,15 +15,15 @@ const services: Services[] = [
   {
     title: "Go",
     categories: [
-      { text: "Rides", onClick: "/" },
-      { text: "Taxi", onClick: "/" },
+      { text: "Rides", to: "/" },
+      { text: "Taxi", to: "/" },
       {
         text: "Taxi-moto",
-        onClick: "/",
+        to: "/",
       },
       {
         text: "CarRental",
-        onClick: "/",
+        to: "/",
       },
     ],
     background: "#3837e4",
@@ -35,7 +35,7 @@ const services: Services[] = [
     categories: [
       {
         text: "Food Delivery",
-        onClick: "/",
+        to: "/",
       },
     ],
     background: "#d2ffd5",
@@ -47,7 +47,7 @@ const services: Services[] = [
     categories: [
       {
         text: "Packages",
-        onClick: "/",
+        to: "/",
       },
     ],
     background: "#7f5ffa",
@@ -59,15 +59,15 @@ const services: Services[] = [
     categories: [
       {
         text: "Medicines",
-        onClick: "/",
+        to: "/",
       },
       {
         text: "SuperMarkets",
-        onClick: "/",
+        to: "/",
       },
       {
         text: "Flowers",
-        onClick: "/",
+        to: "/",
       },
     ],
     background: "#001942",

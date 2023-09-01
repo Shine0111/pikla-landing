@@ -43,7 +43,7 @@ const ServiceCard = ({
       <CardBody gap="2rem">
         {categories.map((category) => (
           <List>
-            <Link key={category.text} className="card-link" to="/">
+            <Link key={category.text} className="card-link" to={category.to}>
               {category.text}
             </Link>
           </List>
