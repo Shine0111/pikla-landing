@@ -44,7 +44,7 @@ const MenuMobile = ({ onClose, isOpen }: Props) => {
                   {service.categories.map((category) => (
                     <VStack alignItems="flex-start" spacing={0}>
                       <Link
-                        to={category.onClick}
+                        to={category.to}
                         className="font-quicksand service-card-link"
                       >
                         {category.text}
