@@ -1,7 +1,7 @@
 import { Heading, Stack, VStack, Text } from "@chakra-ui/react";
 import Hero from "../components/Hero";
 import CategoryLink from "../components/CategoryLink";
-import services from "../data/services";
+import { services } from "../data/services";
 
 const Go = () => {
   return (

@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import ServiceCard from "./ServiceCard";
-import services from "../data/services";
+import { services } from "../data/services";
 import { useNavigate } from "react-router-dom";
 
 const ServicesSlide = () => {

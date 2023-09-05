@@ -42,9 +42,8 @@ const ServiceCard = ({
       </CardHeader>
       <CardBody gap="2rem">
         {categories.map((category) => (
-          <List>
+          <List key={category.text}>
             <Link
-              key={category.text}
               id={heading === "Eat" ? "card-link-reverse" : "card-link"}
               to={category.to}
             >

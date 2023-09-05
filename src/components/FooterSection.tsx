@@ -14,7 +14,7 @@ import logo from "../assets/logo-long.png";
 import appStore from "../assets/app-store.webp";
 import googlePlay from "../assets/google-play.webp";
 import apkDownload from "../assets/apk-download.webp";
-import services from "../data/services";
+import { services } from "../data/services";
 import { Link } from "react-router-dom";
 import termsOfServices from "../data/terms-of-services";
 import socialButtons from "../data/social-buttons";

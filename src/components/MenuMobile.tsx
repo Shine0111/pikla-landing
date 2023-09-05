@@ -12,7 +12,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import MenuAccordion from "./MenuAccordion";
-import services from "../data/services";
+import { services } from "../data/services";
 import { Link } from "react-router-dom";
 
 interface Props {
@@ -42,7 +42,11 @@ const MenuMobile = ({ onClose, isOpen }: Props) => {
               {services.map((service) => (
                 <TabPanel key={service.title}>
                   {service.categories.map((category) => (
-                    <VStack alignItems="flex-start" spacing={0}>
+                    <VStack
+                      alignItems="flex-start"
+                      spacing={0}
+                      key={category.text}
+                    >
                       <Link
                         to={category.to}
                         className="font-quicksand service-card-link"

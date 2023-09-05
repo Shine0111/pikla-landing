@@ -11,6 +11,12 @@ interface Services {
   to: string;
 }
 
+interface CategoryCategory {
+  icon: string;
+  name: string;
+  to: string;
+}
+
 const services: Services[] = [
   {
     title: "Go",
@@ -76,4 +82,16 @@ const services: Services[] = [
   },
 ];
 
-export default services;
+const ridesCategories: CategoryCategory[] = [
+  { icon: "", name: "Comfort", to: "/" },
+  { icon: "", name: "SUV", to: "/" },
+  { icon: "", name: "Kids", to: "/" },
+];
+const taxiCategories: CategoryCategory[] = [
+  { icon: "", name: "Pikla Taxi", to: "/" },
+];
+const taxiMotoCategories: CategoryCategory[] = [
+  { icon: "", name: "Pikla Moto", to: "/" },
+];
+
+export { services, ridesCategories, taxiCategories, taxiMotoCategories };
