@@ -15,13 +15,14 @@ const Go = () => {
       <CategoryLink links={services[0].categories} horizontal={true} />
       <Stack
         direction={{
-          base: "column-reverse",
-          sm: "column-reverse",
-          md: "column-reverse",
+          base: "column",
+          sm: "column",
+          md: "column",
           lg: "row",
         }}
         className="innerWidth"
         justifyContent="center"
+        alignItems="center"
         spacing="3em"
       >
         <VStack alignItems="flex-start">
@@ -30,7 +31,7 @@ const Go = () => {
           </Heading>
           <Text>Order a ride with Pikla, and go further, go faster</Text>
         </VStack>
-        <HStack justifyItems="center">
+        <HStack justifyItems="center" alignItems="center" flexWrap="wrap">
           {ridesCategories.map((category) => (
             <VStack
               alignItems="center"
