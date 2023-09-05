@@ -38,7 +38,11 @@ const Go = () => {
         spacing="3em"
       >
         <VStack alignItems="flex-start">
-          <Heading fontSize="6xl" color="var(dark-blue)">
+          <Heading
+            fontSize="6xl"
+            color="var(dark-blue)"
+            fontFamily="'Quicksand', sans-serif"
+          >
             Rides
           </Heading>
           <Text>Order a ride with Pikla, and go further, go faster</Text>
@@ -96,7 +100,11 @@ const Go = () => {
         imageOnLeft
         onClick={() => console.log("book your ride clicked")}
       />
-      <Heading textAlign="center" marginY="2em">
+      <Heading
+        textAlign="center"
+        marginY="2em"
+        fontFamily="'Quicksand', sans-serif"
+      >
         Explore more with Pikla
       </Heading>
       <ServicesSlide />
