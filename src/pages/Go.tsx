@@ -1,8 +1,18 @@
-import { Heading, Stack, VStack, HStack, Text, Image } from "@chakra-ui/react";
+import {
+  Heading,
+  Stack,
+  VStack,
+  HStack,
+  Text,
+  Image,
+  SimpleGrid,
+} from "@chakra-ui/react";
 import Hero from "../components/Hero";
 import CategoryLink from "../components/CategoryLink";
 import { ridesCategories, services } from "../data/services";
 import { Link, useNavigate } from "react-router-dom";
+import ridesBenefits from "../data/ride-benefits";
+import BenefitCard from "../components/BenefitCard";
 
 const Go = () => {
   const navigate = useNavigate();
@@ -48,6 +58,20 @@ const Go = () => {
           ))}
         </HStack>
       </Stack>
+      <SimpleGrid
+        className="sectionInnerWidth"
+        spacing={4}
+        templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
+      >
+        {ridesBenefits.map((benefit) => (
+          <BenefitCard
+            key={benefit.heading}
+            heading={benefit.heading}
+            imageSrc={benefit.picture}
+            description={benefit.description}
+          />
+        ))}
+      </SimpleGrid>
     </div>
   );
 };

@@ -23,7 +23,7 @@ const BenefitCard = ({ imageSrc, heading, description }: Props) => {
       boxShadow="none"
     >
       <CardHeader>
-        <Image src={imageSrc} />
+        <Image src={imageSrc} width="100px" />
       </CardHeader>
       <CardBody>
         <h3

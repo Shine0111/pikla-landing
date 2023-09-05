@@ -1,6 +1,6 @@
 import pic from "../assets/logo-long.png";
 
-interface Benefit {
+export interface Benefit {
   picture: string;
   heading: string;
   description: string;
