@@ -1,9 +1,11 @@
-import { Heading, Stack, VStack, Text } from "@chakra-ui/react";
+import { Heading, Stack, VStack, HStack, Text, Image } from "@chakra-ui/react";
 import Hero from "../components/Hero";
 import CategoryLink from "../components/CategoryLink";
-import { services } from "../data/services";
+import { ridesCategories, services } from "../data/services";
+import { Link, useNavigate } from "react-router-dom";
 
 const Go = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <Hero buttonText="Book your Ride" buttoned />
@@ -19,6 +21,8 @@ const Go = () => {
           lg: "row",
         }}
         className="innerWidth"
+        justifyContent="center"
+        spacing="3em"
       >
         <VStack alignItems="flex-start">
           <Heading fontSize="6xl" color="var(dark-blue)">
@@ -26,6 +30,21 @@ const Go = () => {
           </Heading>
           <Text>Order a ride with Pikla, and go further, go faster</Text>
         </VStack>
+        <HStack justifyItems="center">
+          {ridesCategories.map((category) => (
+            <VStack
+              alignItems="center"
+              onClick={() => navigate(category.to)}
+              id="card-link"
+              className="iconed-card-link"
+            >
+              <Image src={category.icon} objectFit="fill" />
+              <Link key={category.name} to={category.to} id="card-link">
+                <Text fontSize="xs">{category.name}</Text>
+              </Link>
+            </VStack>
+          ))}
+        </HStack>
       </Stack>
     </div>
   );

@@ -1,3 +1,7 @@
+import comfortIcon from "../assets/comfort.png";
+import suvIcon from "../assets/suv.png";
+import kidsIcon from "../assets/kids.png";
+
 export interface SubSlink {
   text: string;
   to: string;
@@ -83,9 +87,9 @@ const services: Services[] = [
 ];
 
 const ridesCategories: CategoryCategory[] = [
-  { icon: "", name: "Comfort", to: "/" },
-  { icon: "", name: "SUV", to: "/" },
-  { icon: "", name: "Kids", to: "/" },
+  { icon: comfortIcon, name: "Comfort", to: "/" },
+  { icon: suvIcon, name: "SUV", to: "/" },
+  { icon: kidsIcon, name: "Kids", to: "/" },
 ];
 const taxiCategories: CategoryCategory[] = [
   { icon: "", name: "Pikla Taxi", to: "/" },

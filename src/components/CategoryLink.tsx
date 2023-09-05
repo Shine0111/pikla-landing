@@ -12,16 +12,30 @@ const CategoryLink = ({ links, horizontal }: Props) => {
     return (
       <HStack className="innerWidth" justifyContent="center">
         {links.map((link) => (
-          <Link to={link.to} className="font-quicksand service-card-link">
+          <Link
+            to={link.to}
+            className="font-quicksand service-card-link"
+            id="card-link"
+            key={link.text}
+          >
             {link.text}
           </Link>
         ))}
       </HStack>
     );
   return (
-    <VStack className="innerWidth" alignItems="flex-start" spacing={0}>
+    <VStack
+      className="innerWidth"
+      alignItems="flex-start"
+      spacing={0}
+      id="card-link"
+    >
       {links.map((link) => (
-        <Link to={link.to} className="font-quicksand service-card-link">
+        <Link
+          to={link.to}
+          className="font-quicksand service-card-link"
+          key={link.text}
+        >
           {link.text}
         </Link>
       ))}
