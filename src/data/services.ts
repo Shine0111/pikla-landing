@@ -19,6 +19,7 @@ interface CategoryCategory {
   icon: string;
   name: string;
   to: string;
+  benefit: string;
 }
 
 const services: Services[] = [
@@ -87,15 +88,45 @@ const services: Services[] = [
 ];
 
 const ridesCategories: CategoryCategory[] = [
-  { icon: comfortIcon, name: "Comfort", to: "/" },
-  { icon: suvIcon, name: "SUV", to: "/" },
-  { icon: kidsIcon, name: "Kids", to: "/" },
+  {
+    icon: comfortIcon,
+    name: "Comfort",
+    to: "/",
+    benefit:
+      "lorem ipsum lsdkf sldfkj mdkfn lskdf ksldfk sldkfj sldkfj sed ldkf ls lslnfa;lskdjfpw  lksdjf l",
+  },
+  {
+    icon: suvIcon,
+    name: "SUV",
+    to: "/",
+    benefit:
+      "lorem ipsum lsdkf sldfkj mdkfn lskdf ksldfk sldkfj sldkfj sed ldkf ls lslnfa;lskdjfpw  lksdjf l",
+  },
+  {
+    icon: kidsIcon,
+    name: "Kids",
+    to: "/",
+    benefit:
+      "lorem ipsum lsdkf sldfkj mdkfn lskdf ksldfk sldkfj sldkfj sed ldkf ls lslnfa;lskdjfpw  lksdjf l",
+  },
 ];
 const taxiCategories: CategoryCategory[] = [
-  { icon: "", name: "Pikla Taxi", to: "/" },
+  {
+    icon: "",
+    name: "Pikla Taxi",
+    to: "/",
+    benefit:
+      "lorem ipsum lsdkf sldfkj mdkfn lskdf ksldfk sldkfj sldkfj sed ldkf ls lslnfa;lskdjfpw  lksdjf l",
+  },
 ];
 const taxiMotoCategories: CategoryCategory[] = [
-  { icon: "", name: "Pikla Moto", to: "/" },
+  {
+    icon: "",
+    name: "Pikla Moto",
+    to: "/",
+    benefit:
+      "lorem ipsum lsdkf sldfkj mdkfn lskdf ksldfk sldkfj sldkfj sed ldkf ls lslnfa;lskdjfpw  lksdjf l",
+  },
 ];
 
 export { services, ridesCategories, taxiCategories, taxiMotoCategories };

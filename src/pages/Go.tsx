@@ -13,6 +13,8 @@ import { ridesCategories, services } from "../data/services";
 import { Link, useNavigate } from "react-router-dom";
 import ridesBenefits from "../data/ride-benefits";
 import BenefitCard from "../components/BenefitCard";
+import Section from "../components/Section";
+import ServicesSlide from "../components/ServicesSlide";
 
 const Go = () => {
   const navigate = useNavigate();
@@ -72,6 +74,32 @@ const Go = () => {
           />
         ))}
       </SimpleGrid>
+      <Section
+        heading={ridesCategories[0].name}
+        description={ridesCategories[0].benefit}
+        buttonText="Book your ride"
+        backgrounded
+        imageOnLeft
+        onClick={() => console.log("book your ride clicked")}
+      />
+      <Section
+        heading={ridesCategories[1].name}
+        description={ridesCategories[1].benefit}
+        buttonText="Book your ride"
+        onClick={() => console.log("book your ride clicked")}
+      />
+      <Section
+        heading={ridesCategories[2].name}
+        description={ridesCategories[2].benefit}
+        buttonText="Book your ride"
+        backgrounded
+        imageOnLeft
+        onClick={() => console.log("book your ride clicked")}
+      />
+      <Heading textAlign="center" marginY="2em">
+        Explore more with Pikla
+      </Heading>
+      <ServicesSlide />
     </div>
   );
 };
