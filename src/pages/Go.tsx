@@ -37,9 +37,10 @@ const Go = () => {
               onClick={() => navigate(category.to)}
               id="card-link"
               className="iconed-card-link"
+              key={category.name}
             >
               <Image src={category.icon} objectFit="fill" />
-              <Link key={category.name} to={category.to} id="card-link">
+              <Link to={category.to} id="card-link">
                 <Text fontSize="xs">{category.name}</Text>
               </Link>
             </VStack>
