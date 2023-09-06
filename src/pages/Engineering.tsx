@@ -4,10 +4,12 @@ import Hero from "../components/Hero";
 import OurBlogSection from "../components/OurBlogSection";
 import quotes from "../data/fake-quotes";
 import Quote from "../components/Quote";
+import PageTitle from "../components/PageTitle";
 
 const Engineering = () => {
   return (
     <div>
+      <PageTitle titleAddOn="Engineering at Pikla" />
       <Hero />
       <Stack className="sectionInnerWidth">
         <Heading className="titlePadding">Engineering at Pikla</Heading>

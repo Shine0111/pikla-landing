@@ -6,10 +6,12 @@ import BenefitCard from "../components/BenefitCard";
 import StatSection from "../components/StatSection";
 import Section from "../components/Section";
 import ServicesSlide from "../components/ServicesSlide";
+import PageTitle from "../components/PageTitle";
 
 const SocialImpact = () => {
   return (
     <div>
+      <PageTitle titleAddOn="Our Social impact" />
       <Hero />
       <ParagraphContainer>
         <Stack>

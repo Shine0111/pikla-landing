@@ -5,10 +5,12 @@ import LeadershipIntroduction from "../components/LeadershipIntroduction";
 import Leaders from "../components/Leaders";
 import Section from "../components/Section";
 import OurBlogSection from "../components/OurBlogSection";
+import PageTitle from "../components/PageTitle";
 
 const AboutUs = () => {
   return (
     <div>
+      <PageTitle titleAddOn="About us" />
       <Hero />
       <Box className="innerWidth">
         <ParagraphContainer>

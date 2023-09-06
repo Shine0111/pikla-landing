@@ -7,10 +7,12 @@ import Section from "../components/Section";
 import TopQuestions from "../components/TopQuestions";
 import MeetOurCaptainsSection from "../components/MeetOurCaptainsSection";
 import fakeTopQuestions from "../data/fake-top-questions";
+import PageTitle from "../components/PageTitle";
 
 const Captains = () => {
   return (
     <div>
+      <PageTitle titleAddOn="Captains" />
       <Hero buttoned buttonText="Sign Up" />
       <div className="innerWidth">
         <h1 style={{ textAlign: "center" }} className="font-quicksand heading">

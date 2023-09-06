@@ -5,6 +5,7 @@ import Rides from "../components/Rides";
 import { services } from "../data/services";
 import { useState } from "react";
 import Taxi from "../components/Taxi";
+import PageTitle from "../components/PageTitle";
 
 const Go = () => {
   const [clickedService, setClickedService] = useState("Rides");
@@ -13,6 +14,7 @@ const Go = () => {
   };
   return (
     <div>
+      <PageTitle titleAddOn="Go" />
       <Hero buttonText="Book your Ride" buttoned />
       <Heading textAlign="center" color="var(--dark-blue)" fontSize="6xl">
         Go
