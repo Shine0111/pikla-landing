@@ -6,6 +6,7 @@ import StatSection from "../components/StatSection";
 import Section from "../components/Section";
 import TopQuestions from "../components/TopQuestions";
 import MeetOurCaptainsSection from "../components/MeetOurCaptainsSection";
+import fakeTopQuestions from "../data/fake-top-questions";
 
 const Captains = () => {
   return (
@@ -55,7 +56,7 @@ const Captains = () => {
       />
       <MeetOurCaptainsSection />
       <div className="innerWidth">
-        <TopQuestions />
+        <TopQuestions topQuestions={fakeTopQuestions} />
       </div>
     </div>
   );

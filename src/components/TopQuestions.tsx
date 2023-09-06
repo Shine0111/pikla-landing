@@ -1,8 +1,12 @@
 import { Box, Heading } from "@chakra-ui/react";
 import CustomAccordion from "./CustomAccordion";
-import fakeTopQuestions from "../data/fake-top-questions";
+import { Question } from "../data/fake-top-questions";
 
-const TopQuestions = () => {
+interface Props {
+  topQuestions: Question[];
+}
+
+const TopQuestions = ({ topQuestions }: Props) => {
   return (
     <Box
       className="top-questions-innerWidth"
@@ -12,11 +16,11 @@ const TopQuestions = () => {
       <Heading textAlign="center" color="white">
         Top Questions
       </Heading>
-      {fakeTopQuestions.map((fakeTopQuestion) => (
+      {topQuestions.map((topQuestion) => (
         <CustomAccordion
-          key={fakeTopQuestion.question}
-          heading={fakeTopQuestion.question}
-          description={fakeTopQuestion.answer}
+          key={topQuestion.question}
+          heading={topQuestion.question}
+          description={topQuestion.answer}
         />
       ))}
     </Box>
