@@ -26,27 +26,27 @@ const services: Services[] = [
   {
     title: "Go",
     categories: [
-      { text: "Rides", to: "/" },
-      { text: "Taxi", to: "/" },
+      { text: "Rides", to: "#" },
+      { text: "Taxi", to: "#" },
       {
         text: "Taxi-moto",
-        to: "/",
+        to: "#",
       },
       {
         text: "CarRental",
-        to: "/",
+        to: "#",
       },
     ],
     background: "#3837e4",
     arrowColor: "white",
-    to: "/go",
+    to: "#go",
   },
   {
     title: "Eat",
     categories: [
       {
         text: "Food Delivery",
-        to: "/",
+        to: "#",
       },
     ],
     background: "#d2ffd5",
@@ -70,15 +70,15 @@ const services: Services[] = [
     categories: [
       {
         text: "Medicines",
-        to: "/",
+        to: "#",
       },
       {
         text: "SuperMarkets",
-        to: "/",
+        to: "#",
       },
       {
         text: "Flowers",
-        to: "/",
+        to: "#",
       },
     ],
     background: "#001942",
