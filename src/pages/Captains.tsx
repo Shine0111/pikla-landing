@@ -55,9 +55,7 @@ const Captains = () => {
         onClick={() => console.log("clicked sign up")}
       />
       <MeetOurCaptainsSection />
-      <div className="innerWidth">
-        <TopQuestions topQuestions={fakeTopQuestions} />
-      </div>
+      <TopQuestions topQuestions={fakeTopQuestions} />
     </div>
   );
 };

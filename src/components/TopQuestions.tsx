@@ -8,22 +8,24 @@ interface Props {
 
 const TopQuestions = ({ topQuestions }: Props) => {
   return (
-    <Box
-      className="top-questions-innerWidth"
-      background="var(--dark-blue)"
-      borderRadius={20}
-    >
-      <Heading textAlign="center" color="white">
-        Top Questions
-      </Heading>
-      {topQuestions.map((topQuestion) => (
-        <CustomAccordion
-          key={topQuestion.question}
-          heading={topQuestion.question}
-          description={topQuestion.answer}
-        />
-      ))}
-    </Box>
+    <div className="innerWidth">
+      <Box
+        className="top-questions-innerWidth"
+        background="var(--dark-blue)"
+        borderRadius={20}
+      >
+        <Heading textAlign="center" color="white">
+          Top Questions
+        </Heading>
+        {topQuestions.map((topQuestion) => (
+          <CustomAccordion
+            key={topQuestion.question}
+            heading={topQuestion.question}
+            description={topQuestion.answer}
+          />
+        ))}
+      </Box>
+    </div>
   );
 };
 

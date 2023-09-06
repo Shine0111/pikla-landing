@@ -1,7 +1,7 @@
 import comfortIcon from "../assets/comfort.png";
 import suvIcon from "../assets/suv.png";
 import kidsIcon from "../assets/kids.png";
-
+import taxiIcon from "../assets/taxi.png";
 export interface SubSlink {
   text: string;
   to: string;
@@ -112,7 +112,7 @@ const ridesCategories: CategoryCategory[] = [
 ];
 const taxiCategories: CategoryCategory[] = [
   {
-    icon: "",
+    icon: taxiIcon,
     name: "Pikla Taxi",
     to: "/",
     benefit:

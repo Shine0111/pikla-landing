@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Rides from "../components/Rides";
 import { services } from "../data/services";
 import { useState } from "react";
+import Taxi from "../components/Taxi";
 
 const Go = () => {
   const [clickedService, setClickedService] = useState("Rides");
@@ -22,6 +23,7 @@ const Go = () => {
         onClickCallback={handleLinkClick}
       />
       {clickedService === "Rides" && <Rides />}
+      {clickedService === "Taxi" && <Taxi />}
     </div>
   );
 };
