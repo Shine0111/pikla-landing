@@ -39,7 +39,7 @@ const services: Services[] = [
     ],
     background: "#3837e4",
     arrowColor: "white",
-    to: "#go",
+    to: "/go",
   },
   {
     title: "Eat",
