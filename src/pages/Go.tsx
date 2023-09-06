@@ -15,6 +15,8 @@ import ridesBenefits from "../data/ride-benefits";
 import BenefitCard from "../components/BenefitCard";
 import Section from "../components/Section";
 import ServicesSlide from "../components/ServicesSlide";
+import TopQuestions from "../components/TopQuestions";
+import fakeRideTopQuestions from "../data/fake-ride-questions";
 
 const Go = () => {
   const navigate = useNavigate();
@@ -108,6 +110,7 @@ const Go = () => {
         Explore more with Pikla
       </Heading>
       <ServicesSlide />
+      <TopQuestions topQuestions={fakeRideTopQuestions} />
     </div>
   );
 };
