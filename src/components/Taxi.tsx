@@ -1,5 +1,5 @@
 import { Heading, Stack, VStack, HStack, Text, Image } from "@chakra-ui/react";
-import { ridesCategories, taxiCategories } from "../data/services";
+import { taxiCategories } from "../data/services";
 import { Link, useNavigate } from "react-router-dom";
 import Section from "../components/Section";
 import ServicesSlide from "../components/ServicesSlide";
