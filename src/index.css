@@ -247,6 +247,7 @@ button:hover {
 
 #card-link:hover {
   color: none;
+  cursor: pointer
 }
 
 #card-link::before {
@@ -271,6 +272,7 @@ button:hover {
 
 #card-link-reverse:hover {
   color: var(--dark-blue);
+  cursor: pointer;
 }
 
 #card-link-reverse::before {

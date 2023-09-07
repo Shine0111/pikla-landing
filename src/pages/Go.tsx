@@ -8,10 +8,11 @@ import Taxi from "../components/Taxi";
 import PageTitle from "../components/PageTitle";
 import CarRental from "../components/CarRental";
 import TaxiMoto from "../components/TaxiMoto";
-import { ScrollRestoration } from "react-router-dom";
+import { ScrollRestoration, useLocation } from "react-router-dom";
 
 const Go = () => {
   const [clickedService, setClickedService] = useState("Rides");
+  const location = useLocation();
   const handleLinkClick = (text: string) => {
     setClickedService(text);
   };
@@ -22,6 +23,7 @@ const Go = () => {
       <Heading textAlign="center" color="var(--dark-blue)" fontSize="6xl">
         Go
       </Heading>
+      <p>Data : {location.state}</p>
       <CategoryLink
         links={services[0].categories}
         horizontal={true}

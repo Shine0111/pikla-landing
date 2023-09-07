@@ -39,6 +39,9 @@ const ServicesSlide = () => {
             <ServiceCard
               heading={service.title}
               onClick={() => navigate(service.to)}
+              onCategoryClick={(category) =>
+                navigate(service.to, { state: category })
+              }
               categories={service.categories}
               background={service.background}
               color={service.color}

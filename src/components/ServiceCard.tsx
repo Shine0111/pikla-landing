@@ -14,6 +14,7 @@ interface Props {
   heading: string;
   categories: SubSlink[];
   onClick: () => void;
+  onCategoryClick: (category: string) => void;
   background: string;
   color?: string;
   arrowColor?: string;
@@ -23,10 +24,14 @@ const ServiceCard = ({
   categories,
   heading,
   onClick,
+  onCategoryClick,
   background,
   color,
   arrowColor,
 }: Props) => {
+  const handleCategoryClick = (category: string) => {
+    onCategoryClick(category);
+  };
   return (
     <Card
       borderRadius={20}
@@ -43,12 +48,12 @@ const ServiceCard = ({
       <CardBody gap="2rem">
         {categories.map((category) => (
           <List key={category.text}>
-            <Link
+            <h6
               id={heading === "Eat" ? "card-link-reverse" : "card-link"}
-              to={category.to}
+              onClick={() => handleCategoryClick(category.text)}
             >
               {category.text}
-            </Link>
+            </h6>
           </List>
         ))}
       </CardBody>
