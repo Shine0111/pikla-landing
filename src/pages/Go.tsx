@@ -23,6 +23,7 @@ const Go = () => {
         links={services[0].categories}
         horizontal={true}
         onClickCallback={handleLinkClick}
+        clickedService={clickedService}
       />
       {clickedService === "Rides" && <Rides />}
       {clickedService === "Taxi" && <Taxi />}

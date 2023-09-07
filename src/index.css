@@ -220,7 +220,7 @@ button:hover {
   margin: 5px;
 }
 
-.service-card-link:active {
+.service-card-link-active {
   background: var(--blue-bluer);
   border-radius: 0.5em;
   padding: 0.25em 1em 0.25em 1em;

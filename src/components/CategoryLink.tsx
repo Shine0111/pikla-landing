@@ -6,9 +6,15 @@ interface Props {
   links: SubSlink[];
   horizontal?: boolean;
   onClickCallback?: (text: string) => void;
+  clickedService: string;
 }
 
-const CategoryLink = ({ links, horizontal, onClickCallback }: Props) => {
+const CategoryLink = ({
+  links,
+  horizontal,
+  onClickCallback,
+  clickedService,
+}: Props) => {
   const handleClick = (text: string) => {
     // Call the onClickCallback with the clicked link.text
     if (onClickCallback) {
@@ -21,7 +27,11 @@ const CategoryLink = ({ links, horizontal, onClickCallback }: Props) => {
         {links.map((link) => (
           <Link
             to={link.to}
-            className="font-quicksand service-card-link"
+            className={`font-quicksand  ${
+              clickedService === link.text
+                ? "service-card-link-active"
+                : "service-card-link"
+            }`}
             id="card-link"
             key={link.text}
             onClick={() => handleClick(link.text)}
@@ -41,7 +51,11 @@ const CategoryLink = ({ links, horizontal, onClickCallback }: Props) => {
       {links.map((link) => (
         <Link
           to={link.to}
-          className="font-quicksand service-card-link"
+          className={`font-quicksand  ${
+            clickedService === link.text
+              ? "service-card-link-active"
+              : "service-card-link"
+          }`}
           key={link.text}
           onClick={() => handleClick(link.text)}
         >
