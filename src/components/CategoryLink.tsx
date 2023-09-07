@@ -43,6 +43,7 @@ const CategoryLink = ({ links, horizontal, onClickCallback }: Props) => {
           to={link.to}
           className="font-quicksand service-card-link"
           key={link.text}
+          onClick={() => handleClick(link.text)}
         >
           {link.text}
         </Link>
