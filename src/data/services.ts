@@ -26,15 +26,15 @@ const services: Services[] = [
   {
     title: "Go",
     categories: [
-      { text: "Rides", to: "#" },
-      { text: "Taxi", to: "#" },
+      { text: "Rides", to: "/go" },
+      { text: "Taxi", to: "/go" },
       {
         text: "Taxi-moto",
-        to: "#",
+        to: "/go",
       },
       {
         text: "CarRental",
-        to: "#",
+        to: "/go",
       },
     ],
     background: "#3837e4",
