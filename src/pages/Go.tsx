@@ -8,6 +8,7 @@ import Taxi from "../components/Taxi";
 import PageTitle from "../components/PageTitle";
 import CarRental from "../components/CarRental";
 import TaxiMoto from "../components/TaxiMoto";
+import { ScrollRestoration } from "react-router-dom";
 
 const Go = () => {
   const [clickedService, setClickedService] = useState("Rides");
@@ -31,6 +32,7 @@ const Go = () => {
       {clickedService === "Taxi" && <Taxi />}
       {clickedService === "CarRental" && <CarRental />}
       {clickedService === "Taxi-moto" && <TaxiMoto />}
+      <ScrollRestoration />
     </div>
   );
 };

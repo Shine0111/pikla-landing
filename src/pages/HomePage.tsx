@@ -1,3 +1,4 @@
+import { ScrollRestoration } from "react-router-dom";
 import AboutUsSection from "../components/AboutUsSection";
 import CaptainsSection from "../components/CaptainsSection";
 import EngineeringPiklaSection from "../components/EngineeringPiklaSection";
@@ -16,6 +17,7 @@ const HomePage = () => {
       <EngineeringPiklaSection />
       <SocialImpactSection />
       <OurBlogSection />
+      <ScrollRestoration />
     </div>
   );
 };

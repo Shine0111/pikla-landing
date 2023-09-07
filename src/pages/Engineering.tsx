@@ -5,6 +5,7 @@ import OurBlogSection from "../components/OurBlogSection";
 import quotes from "../data/fake-quotes";
 import Quote from "../components/Quote";
 import PageTitle from "../components/PageTitle";
+import { ScrollRestoration } from "react-router-dom";
 
 const Engineering = () => {
   return (
@@ -48,6 +49,7 @@ const Engineering = () => {
         ))}
       </div>
       <OurBlogSection />
+      <ScrollRestoration />
     </div>
   );
 };

@@ -7,6 +7,7 @@ import StatSection from "../components/StatSection";
 import Section from "../components/Section";
 import ServicesSlide from "../components/ServicesSlide";
 import PageTitle from "../components/PageTitle";
+import { ScrollRestoration } from "react-router-dom";
 
 const SocialImpact = () => {
   return (
@@ -87,6 +88,7 @@ const SocialImpact = () => {
         Explore more with Pikla
       </Heading>
       <ServicesSlide />
+      <ScrollRestoration />
     </div>
   );
 };

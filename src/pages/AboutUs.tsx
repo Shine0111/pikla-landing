@@ -6,6 +6,7 @@ import Leaders from "../components/Leaders";
 import Section from "../components/Section";
 import OurBlogSection from "../components/OurBlogSection";
 import PageTitle from "../components/PageTitle";
+import { ScrollRestoration } from "react-router-dom";
 
 const AboutUs = () => {
   return (
@@ -52,6 +53,7 @@ const AboutUs = () => {
         </ParagraphContainer>
       </Box>
       <OurBlogSection />
+      <ScrollRestoration />
     </div>
   );
 };

@@ -8,6 +8,7 @@ import TopQuestions from "../components/TopQuestions";
 import MeetOurCaptainsSection from "../components/MeetOurCaptainsSection";
 import fakeTopQuestions from "../data/fake-top-questions";
 import PageTitle from "../components/PageTitle";
+import { ScrollRestoration } from "react-router-dom";
 
 const Captains = () => {
   return (
@@ -58,6 +59,7 @@ const Captains = () => {
       />
       <MeetOurCaptainsSection />
       <TopQuestions topQuestions={fakeTopQuestions} />
+      <ScrollRestoration />
     </div>
   );
 };
