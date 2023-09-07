@@ -7,6 +7,7 @@ import { useState } from "react";
 import Taxi from "../components/Taxi";
 import PageTitle from "../components/PageTitle";
 import CarRental from "../components/CarRental";
+import TaxiMoto from "../components/TaxiMoto";
 
 const Go = () => {
   const [clickedService, setClickedService] = useState("Rides");
@@ -29,6 +30,7 @@ const Go = () => {
       {clickedService === "Rides" && <Rides />}
       {clickedService === "Taxi" && <Taxi />}
       {clickedService === "CarRental" && <CarRental />}
+      {clickedService === "Taxi-moto" && <TaxiMoto />}
     </div>
   );
 };
