@@ -46,7 +46,7 @@ const services: Services[] = [
     categories: [
       {
         text: "Food Delivery",
-        to: "#",
+        to: "/eat",
       },
     ],
     background: "#d2ffd5",
@@ -58,7 +58,7 @@ const services: Services[] = [
     categories: [
       {
         text: "Packages",
-        to: "/",
+        to: "/delivery",
       },
     ],
     background: "#7f5ffa",
@@ -70,15 +70,15 @@ const services: Services[] = [
     categories: [
       {
         text: "Medicines",
-        to: "#",
+        to: "/get",
       },
       {
         text: "SuperMarkets",
-        to: "#",
+        to: "/get",
       },
       {
         text: "Flowers",
-        to: "#",
+        to: "/get",
       },
     ],
     background: "#001942",
