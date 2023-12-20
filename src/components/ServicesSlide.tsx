@@ -13,18 +13,17 @@ const ServicesSlide = () => {
   const servicesRef = useRef(null);
   console.log(state);
 
-  const yOffset = -100;
-
-  const y =
-    servicesRef.current?.getBoundingClientRect().top +
-    window.pageYOffset +
-    yOffset;
-
   useEffect(() => {
+    const yOffset = -100;
+
+    const y =
+      servicesRef.current?.getBoundingClientRect().top +
+      window.pageYOffset +
+      yOffset;
     if (state === true) {
       window.scrollTo({ top: y, behavior: "smooth" });
     }
-  }, [state, y]);
+  }, [state]);
 
   return (
     <div className="innerWidth" id="service" ref={servicesRef}>
