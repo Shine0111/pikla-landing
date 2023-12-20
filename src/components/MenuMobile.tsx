@@ -21,6 +21,10 @@ interface Props {
 }
 
 const MenuMobile = ({ onClose, isOpen }: Props) => {
+  // const [drawerStatus, setDrawerStatus] = useState(isOpen);
+  const handleLinkClicked = () => {
+    onClose();
+  };
   return (
     <Drawer placement="top" onClose={onClose} isOpen={isOpen} size="full">
       <DrawerOverlay />
@@ -60,7 +64,7 @@ const MenuMobile = ({ onClose, isOpen }: Props) => {
             </TabPanels>
           </Tabs>
         </DrawerHeader>
-        <MenuAccordion />
+        <MenuAccordion handleLinkClicked={handleLinkClicked} />
         <DrawerCloseButton />
       </DrawerContent>
     </Drawer>

@@ -12,7 +12,11 @@ import {
 import navLinks from "../data/nav-links";
 import { Link } from "react-router-dom";
 
-const MenuAccordion = () => {
+interface Props {
+  handleLinkClicked: () => void;
+}
+
+const MenuAccordion = ({ handleLinkClicked }: Props) => {
   return (
     <Accordion>
       {navLinks.map((navLink) => {
@@ -34,7 +38,9 @@ const MenuAccordion = () => {
                       color="var(--dark-blue)"
                     >
                       <ListItem>
-                        <Link to="about-us">About us</Link>
+                        <Link to="about-us" onClick={handleLinkClicked}>
+                          About us
+                        </Link>
                       </ListItem>
                       <ListItem>
                         <Link to="engineering-at-pikla">
