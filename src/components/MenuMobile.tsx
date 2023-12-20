@@ -21,7 +21,6 @@ interface Props {
 }
 
 const MenuMobile = ({ onClose, isOpen }: Props) => {
-  // const [drawerStatus, setDrawerStatus] = useState(isOpen);
   const handleLinkClicked = () => {
     onClose();
   };
@@ -52,8 +51,12 @@ const MenuMobile = ({ onClose, isOpen }: Props) => {
                       key={category.text}
                     >
                       <Link
+                        state={category.text}
                         to={category.to}
                         className="font-quicksand service-card-link"
+                        onClick={() => {
+                          onClose();
+                        }}
                       >
                         {category.text}
                       </Link>

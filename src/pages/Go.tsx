@@ -12,11 +12,13 @@ import { ScrollRestoration, useLocation } from "react-router-dom";
 
 const Go = () => {
   const [clickedService, setClickedService] = useState("Rides");
-  const location = useLocation();
+  const { state } = useLocation();
+  console.log("state", state);
+
   const handleLinkClick = (text: string) => {
     setClickedService(text);
   };
-  if (location.state)
+  if (!state)
     return (
       <div>
         <PageTitle titleAddOn="Go" />
@@ -28,12 +30,12 @@ const Go = () => {
           links={services[0].categories}
           horizontal={true}
           onClickCallback={handleLinkClick}
-          clickedService={location.state}
+          clickedService={clickedService}
         />
-        {location.state === "Rides" && <Rides />}
-        {location.state === "Taxi" && <Taxi />}
-        {location.state === "CarRental" && <CarRental />}
-        {location.state === "Taxi-moto" && <TaxiMoto />}
+        {clickedService === "Rides" && <Rides />}
+        {clickedService === "Taxi" && <Taxi />}
+        {clickedService === "CarRental" && <CarRental />}
+        {clickedService === "Taxi-moto" && <TaxiMoto />}
         <ScrollRestoration />
       </div>
     );
@@ -48,12 +50,12 @@ const Go = () => {
         links={services[0].categories}
         horizontal={true}
         onClickCallback={handleLinkClick}
-        clickedService={clickedService}
+        clickedService={state}
       />
-      {clickedService === "Rides" && <Rides />}
-      {clickedService === "Taxi" && <Taxi />}
-      {clickedService === "CarRental" && <CarRental />}
-      {clickedService === "Taxi-moto" && <TaxiMoto />}
+      {state === "Rides" && <Rides />}
+      {state === "Taxi" && <Taxi />}
+      {state === "CarRental" && <CarRental />}
+      {state === "Taxi-moto" && <TaxiMoto />}
       <ScrollRestoration />
     </div>
   );

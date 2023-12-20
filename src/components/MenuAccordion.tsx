@@ -43,18 +43,27 @@ const MenuAccordion = ({ handleLinkClicked }: Props) => {
                         </Link>
                       </ListItem>
                       <ListItem>
-                        <Link to="engineering-at-pikla">
+                        <Link
+                          to="engineering-at-pikla"
+                          onClick={handleLinkClicked}
+                        >
                           Engineering at pikla
                         </Link>
                       </ListItem>
                       <ListItem>
-                        <Link to="/">Careers</Link>
+                        <Link to="/" onClick={handleLinkClicked}>
+                          Careers
+                        </Link>
                       </ListItem>
                       <ListItem>
-                        <Link to="/">Explore open roles</Link>
+                        <Link to="/" onClick={handleLinkClicked}>
+                          Explore open roles
+                        </Link>
                       </ListItem>
                       <ListItem>
-                        <Link to="/">Why Pikla</Link>
+                        <Link to="/" onClick={handleLinkClicked}>
+                          Why Pikla
+                        </Link>
                       </ListItem>
                     </List>
                   </VStack>
