@@ -4,12 +4,30 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import ServiceCard from "./ServiceCard";
 import { services } from "../data/services";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useEffect, useRef } from "react";
 
 const ServicesSlide = () => {
   const navigate = useNavigate();
+  const { state } = useLocation();
+  const servicesRef = useRef(null);
+  console.log(state);
+
+  const yOffset = -100;
+
+  const y =
+    servicesRef.current?.getBoundingClientRect().top +
+    window.pageYOffset +
+    yOffset;
+
+  useEffect(() => {
+    if (state === true) {
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  }, [state, y]);
+
   return (
-    <div className="innerWidth" id="service">
+    <div className="innerWidth" id="service" ref={servicesRef}>
       <Swiper
         spaceBetween={20}
         slidesPerView={4}

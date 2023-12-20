@@ -9,6 +9,9 @@
   --blue-bluer: rgba(36, 110, 185, 0.81);
   font-family: 'Quicksand', sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 .font-quicksand {
   font-family: 'Quicksand', sans-serif;
