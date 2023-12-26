@@ -1,5 +1,6 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import ServiceCard from "./ServiceCard";
@@ -28,10 +29,16 @@ const ServicesSlide = () => {
   return (
     <div className="innerWidth" id="service" ref={servicesRef}>
       <Swiper
+        modules={[Autoplay]}
         spaceBetween={20}
         slidesPerView={4}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
+        loop
+        autoplay={{
+          delay: 2100,
+          disableOnInteraction: true,
+        }}
         breakpoints={{
           320: {
             slidesPerView: 1,
