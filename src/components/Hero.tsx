@@ -1,6 +1,7 @@
 import { Box, Button, Image, Show } from "@chakra-ui/react";
 import heroGif from "../assets/logo-long.png";
 import UseApp from "./UseApp";
+import useWindowSize from "../hooks/useWindowSize";
 
 interface Props {
   buttoned?: boolean;
@@ -8,6 +9,7 @@ interface Props {
 }
 
 const Hero = ({ buttoned, buttonText }: Props) => {
+  const { windowWidth } = useWindowSize();
   return (
     <Box className="innerWidth">
       <Box marginTop={70}>
@@ -18,11 +20,24 @@ const Hero = ({ buttoned, buttonText }: Props) => {
           <Image
             src={heroGif}
             borderRadius={20}
-            objectFit="cover"
+            objectFit="contain"
             width="500px"
+            height="250px"
           />
           {buttoned && (
-            <Button className="hero-image-button">{buttonText}</Button>
+            <div style={{ position: "absolute", textAlign: "center" }}>
+              {windowWidth > 700 && (
+                <Button className="hero-image-button-desktop">
+                  {buttonText}
+                </Button>
+              )}
+
+              {windowWidth < 400 && (
+                <Button className="hero-image-button-mobile">
+                  {buttonText}
+                </Button>
+              )}
+            </div>
           )}
         </Box>
       </Box>

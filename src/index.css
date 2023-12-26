@@ -201,18 +201,21 @@ button:hover {
   border-radius: 1.5em;
 }
 
-.hero-image-button {
-  position: absolute;
-
-  /* transform: translate(100%, -200%);
-  -ms-transform: translate(-50%, -50%); */
+.hero-image-button-mobile {
   background-color: #555;
   color: white;
   font-size: 16px;
-  /* padding: 12px 24px; */
-  right: 50rem;
-  top: 37%;
-  /* margin-left: 37%; */
+  border: none;
+  border-radius: 5px;
+  top: calc(250px - 50px);
+}
+.hero-image-button-desktop {
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  right: 100rem;
+  top: 37%; 
+ margin-left: 37%;
   border: none;
   cursor: pointer;
   border-radius: 5px;
