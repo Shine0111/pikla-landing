@@ -11,15 +11,26 @@ import navLinks from "../data/nav-links";
 import logo from "../assets/logo-long.png";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import MenuMobile from "./MenuMobile";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
+import { ScrollRestoration, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isScrolling, setIsScrolling] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { state } = useLocation();
 
   const navigate = useNavigate();
+
+  const stateRef = useRef(state);
+
+  useEffect(() => {
+    // Option 1: Using useState
+    // setCurrentState(null);
+
+    // Option 2: Using useRef
+    stateRef.current = null;
+  }, []);
 
   window.addEventListener("scroll", () => {
     setIsScrolling(window.scrollY > 0);
@@ -43,7 +54,7 @@ const Header = () => {
           />
           <Show above="lg">
             <HStack>
-              <Link to="/" state={true}>
+              <Link to="/" state={false}>
                 <h2 className="font-quicksand" style={{ fontWeight: "bold" }}>
                   Services
                 </h2>
@@ -72,7 +83,9 @@ const Header = () => {
             color="white"
             fontWeight="2em"
           >
-            Download the app
+            <Link to="/" state={true}>
+              Download the app
+            </Link>
           </Button>
           <Show above="lg">
             <Text>Lang</Text>
@@ -89,6 +102,7 @@ const Header = () => {
       <Show below="lg">
         <MenuMobile onClose={onClose} isOpen={isOpen} />
       </Show>
+      <ScrollRestoration />
     </div>
   );
 };

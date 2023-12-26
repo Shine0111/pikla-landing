@@ -15,11 +15,27 @@ import appStore from "../assets/app-store.webp";
 import googlePlay from "../assets/google-play.webp";
 import apkDownload from "../assets/apk-download.webp";
 import { services } from "../data/services";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import termsOfServices from "../data/terms-of-services";
 import socialButtons from "../data/social-buttons";
+import { useRef, useEffect } from "react";
 
 const FooterSection = () => {
+  const { state } = useLocation();
+  const downloadSectionRef = useRef(null);
+  console.log(state);
+
+  useEffect(() => {
+    const yOffset = -100;
+
+    const y =
+      downloadSectionRef.current?.getBoundingClientRect().top +
+      window.pageYOffset +
+      yOffset;
+    if (state === true) {
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  }, [state]);
   return (
     <Stack
       direction={{
@@ -39,7 +55,7 @@ const FooterSection = () => {
         justifyContent="space-between"
         paddingBottom="3em"
       >
-        <VStack spacing="1em">
+        <VStack spacing="1em" ref={downloadSectionRef}>
           <button className="footer-heading">
             <Image src={logo} width="125px" />
           </button>

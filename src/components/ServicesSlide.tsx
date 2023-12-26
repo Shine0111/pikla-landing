@@ -21,7 +21,7 @@ const ServicesSlide = () => {
       servicesRef.current?.getBoundingClientRect().top +
       window.pageYOffset +
       yOffset;
-    if (state === true) {
+    if (state === false) {
       window.scrollTo({ top: y, behavior: "smooth" });
     }
   }, [state]);
