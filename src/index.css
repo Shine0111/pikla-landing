@@ -208,14 +208,17 @@ button:hover {
   border: none;
   border-radius: 5px;
   top: calc(250px - 50px);
+  text-align: center;
 }
 .hero-image-button-desktop {
   background-color: #555;
   color: white;
   font-size: 16px;
-  right: 100rem;
-  top: 37%; 
- margin-left: 37%;
+  /* right: 100rem; */
+  /* top: 37%;  */
+  /* margin-left: 37%; */
+  top: calc(250px - 50px);
+  left: calc(500px - 50px);
   border: none;
   cursor: pointer;
   border-radius: 5px;

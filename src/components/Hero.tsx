@@ -25,7 +25,7 @@ const Hero = ({ buttoned, buttonText }: Props) => {
             height="250px"
           />
           {buttoned && (
-            <div style={{ position: "absolute", textAlign: "center" }}>
+            <div style={{ position: "absolute" }}>
               {windowWidth > 700 && (
                 <Button className="hero-image-button-desktop">
                   {buttonText}
