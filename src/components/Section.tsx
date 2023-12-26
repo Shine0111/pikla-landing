@@ -69,9 +69,9 @@ const Section = ({
         }}
         color={"black"}
       >
-        <VStack alignItems="flex-start" spacing={5} justifyContent="center">
+        <VStack alignItems="flex-end" spacing={5} justifyContent="center">
           <h1 className="font-quicksand heading">{heading}</h1>
-          <Text>{description}</Text>
+          <Text textAlign="end">{description}</Text>
 
           <Button
             onClick={onClick}
@@ -88,6 +88,7 @@ const Section = ({
           boxSize={400}
           width={500}
           objectFit="cover"
+          alignSelf="flex-end"
         />
       </Stack>
     </div>
