@@ -22,7 +22,12 @@ const Go = () => {
     return (
       <div>
         <PageTitle titleAddOn="Go" />
-        <Hero buttonText="Book your Ride" buttoned />
+        <Hero
+          buttonText={
+            clickedService === "CarRental" ? "Rent a Car" : "Book your Ride"
+          }
+          buttoned
+        />
         <Heading textAlign="center" color="var(--dark-blue)" fontSize="6xl">
           Go
         </Heading>
@@ -42,7 +47,10 @@ const Go = () => {
   return (
     <div>
       <PageTitle titleAddOn="Go" />
-      <Hero buttonText="Book your Ride" buttoned />
+      <Hero
+        buttonText={state === "CarRental" ? "Rent a Car" : "Book your Ride"}
+        buttoned
+      />
       <Heading textAlign="center" color="var(--dark-blue)" fontSize="6xl">
         Go
       </Heading>

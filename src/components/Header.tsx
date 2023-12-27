@@ -27,9 +27,8 @@ const Header = () => {
   useEffect(() => {
     // Option 1: Using useState
     // setCurrentState(null);
-
     // Option 2: Using useRef
-    stateRef.current = null;
+    // stateRef.current = false;
   }, []);
 
   window.addEventListener("scroll", () => {
@@ -83,7 +82,12 @@ const Header = () => {
             color="white"
             fontWeight="2em"
           >
-            <Link to="/" state={true} className="download-the-app-link">
+            <Link
+              to="/"
+              state={true}
+              className="download-the-app-link"
+              onClick={() => (stateRef.current = true)}
+            >
               Download the app
             </Link>
           </Button>

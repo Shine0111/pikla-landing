@@ -23,6 +23,7 @@ import { useRef, useEffect } from "react";
 const FooterSection = () => {
   const { state } = useLocation();
   const downloadSectionRef = useRef(null);
+
   console.log(state);
 
   useEffect(() => {
