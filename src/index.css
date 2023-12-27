@@ -140,6 +140,15 @@ button:hover {
 
 }
 
+.download-the-app-link:active {
+  text-decoration: none;
+  color: white;
+}
+.download-the-app-link:visited {
+  color: white;
+  text-decoration: none;
+}
+
 .content-parent {
 
   margin-top: 1rem;

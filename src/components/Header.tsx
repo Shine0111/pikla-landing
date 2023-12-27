@@ -83,7 +83,7 @@ const Header = () => {
             color="white"
             fontWeight="2em"
           >
-            <Link to="/" state={true}>
+            <Link to="/" state={true} className="download-the-app-link">
               Download the app
             </Link>
           </Button>
