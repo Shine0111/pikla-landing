@@ -11,18 +11,19 @@ import { useEffect, useRef } from "react";
 const ServicesSlide = () => {
   const navigate = useNavigate();
   const { state } = useLocation();
-  const servicesRef = useRef(null);
+  const servicesRef = useRef<HTMLDivElement>(null);
   console.log(state);
 
   useEffect(() => {
     const yOffset = -100;
 
-    const y =
-      servicesRef.current?.getBoundingClientRect().top +
-      window.pageYOffset +
-      yOffset;
-    if (state === false) {
-      window.scrollTo({ top: y, behavior: "smooth" });
+    const sectionRef = servicesRef.current;
+    if (sectionRef) {
+      const y =
+        sectionRef.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      if (state === false) {
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
     }
   }, [state]);
 
