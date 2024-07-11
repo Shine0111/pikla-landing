@@ -22,19 +22,20 @@ import { useRef, useEffect } from "react";
 
 const FooterSection = () => {
   const { state } = useLocation();
-  const downloadSectionRef = useRef(null);
+  const downloadSectionRef = useRef<HTMLDivElement>(null);
 
   console.log(state);
 
   useEffect(() => {
     const yOffset = -100;
 
-    const y =
-      downloadSectionRef.current?.getBoundingClientRect().top +
-      window.pageYOffset +
-      yOffset;
-    if (state === true) {
-      window.scrollTo({ top: y, behavior: "smooth" });
+    const sectionRef = downloadSectionRef.current;
+    if (sectionRef) {
+      const y =
+        sectionRef.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      if (state === true) {
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
     }
   }, [state]);
   return (
@@ -186,7 +187,7 @@ const FooterSection = () => {
             <IconButton
               key={socialButton.ariaLabel}
               aria-label={socialButton.ariaLabel}
-              icon={<socialButton.icon size={30} />}
+              icon={<socialButton.icon />}
               background="none"
               size="lg"
             />
